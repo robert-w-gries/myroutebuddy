@@ -3,10 +3,6 @@
     <!-- Sidebar -->
     <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-[36rem] lg:flex-col">
       <div class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4">
-        <!-- Sidebar header -->
-        <div class="flex h-16 items-center">
-          <h2 class="text-2xl font-bold text-gray-800">Task Planner</h2>
-        </div>
 
         <!-- Progress Section -->
         <div class="mt-4">
@@ -33,7 +29,7 @@
 
         <!-- Add Custom Task Section -->
         <div class="mt-6">
-          <h3 class="text-lg font-semibold text-gray-700 mb-4">Add Custom Task</h3>
+          <h3 class="text-lg font-semibold text-gray-700 mb-4">Add Custom Task / Note</h3>
           <input
             type="text"
             v-model="customTaskName"
@@ -107,6 +103,13 @@
                 Import Route
               </button>
             </div>
+            <!-- Reset App -->
+            <button
+              @click="resetApp"
+              class="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-sm hover:bg-red-600 transition"
+            >
+              Reset
+            </button>
           </div>
         </nav>
       </div>
@@ -115,7 +118,16 @@
     <!-- Main Content Area -->
     <div class="lg:pl-[36rem] flex-1">
       <div class="p-6">
-        <h1 class="text-4xl font-bold mb-8 text-gray-800">Leagues 5: Raging Echoes Task Route Planner</h1>
+        <h1 class="text-4xl font-bold mb-8 text-gray-800">My Route Buddy - Leagues 5: Raging Echoes Task Route Planner</h1>
+        <h2 class="text-md mb-8 text-gray-800">
+          If you have any issues, want to report a bug, have a suggestion, or want to help develop this web app yourself, please visit
+          <a href="https://github.com/KennethLuczko/myroutebuddy" 
+            class="text-blue-500 underline hover:text-blue-700" 
+            target="_blank" 
+            rel="noopener noreferrer">
+            this GitHub and contribute.
+          </a>
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Available Tasks -->
           <TaskList :tasks="filteredTasks" @add-task="addTask" />
@@ -234,6 +246,16 @@ export default {
         }
       } catch (error) {
         alert('Invalid route JSON. Please try again.');
+      }
+    },
+    resetApp() {
+      if (confirm('Are you sure you want to reset? This will clear your route and selected regions.')) {
+        this.route = [];
+        this.selectedRegions = [];
+        this.customTaskName = ''; // Clear any custom task input
+        localStorage.removeItem('route');
+        localStorage.removeItem('selectedRegions');
+        alert('App has been reset.');
       }
     },
     loadTasks() {
