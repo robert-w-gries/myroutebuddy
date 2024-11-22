@@ -1,0 +1,245 @@
+<template>
+  <div class="min-h-screen flex bg-gray-50">
+    <!-- Sidebar -->
+    <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-[36rem] lg:flex-col">
+      <div class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4">
+        <!-- Sidebar header -->
+        <div class="flex h-16 items-center">
+          <h2 class="text-2xl font-bold text-gray-800">Task Planner</h2>
+        </div>
+
+        <!-- Progress Section -->
+        <div class="mt-4">
+          <h3 class="text-lg font-semibold text-gray-700 mb-4">Progress</h3>
+          <div class="w-full bg-gray-200 rounded-full h-4">
+            <div
+              class="bg-blue-500 h-4 rounded-full transition-all"
+              :style="{ width: progressPercentage + '%' }"
+            ></div>
+          </div>
+          <p class="text-sm text-gray-500 mt-2">
+            {{ completedPoints }} of {{ totalPoints }} points completed
+          </p>
+        </div>
+
+        <!-- Region Selection -->
+        <div class="mt-8">
+          <RegionFilter
+            :regions="regions"
+            :selectedRegions="selectedRegions"
+            @update-regions="updateRegions"
+          />
+        </div>
+
+        <!-- Manage Routes Section -->
+        <nav class="flex flex-1 flex-col mt-8">
+          <h3 class="text-lg font-semibold text-gray-700 mb-4">Manage Your Routes</h3>
+          <div class="space-y-3">
+            <!-- Save Route -->
+            <button
+              @click="saveRoute"
+              class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg shadow-sm hover:bg-blue-600 transition"
+            >
+              Save Route
+            </button>
+
+            <!-- Load Route -->
+            <div class="space-y-2">
+              <select
+                v-model="selectedRoute"
+                class="w-full bg-gray-100 border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="" disabled>Select a Route</option>
+                <option
+                  v-for="(routeName, index) in Object.keys(savedRoutes)"
+                  :key="index"
+                  :value="routeName"
+                >
+                  {{ routeName }}
+                </option>
+              </select>
+              <button
+                @click="loadRoute"
+                :disabled="!selectedRoute"
+                class="w-full bg-gray-300 text-gray-700 py-2 rounded-lg shadow-sm hover:bg-gray-400 transition disabled:opacity-50"
+              >
+                Load Route
+              </button>
+            </div>
+
+            <!-- Share Route -->
+            <button
+              @click="shareRoute"
+              class="w-full bg-green-500 text-white px-4 py-2 rounded-lg shadow-sm hover:bg-green-600 transition"
+            >
+              Share Route
+            </button>
+
+            <!-- Import Route -->
+            <div>
+              <textarea
+                v-model="importedRoute"
+                placeholder="Paste shared route JSON here..."
+                class="w-full bg-gray-100 border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></textarea>
+              <button
+                @click="importRoute"
+                :disabled="!importedRoute"
+                class="w-full bg-purple-500 text-white py-2 rounded-lg shadow-sm hover:bg-purple-600 transition disabled:opacity-50"
+              >
+                Import Route
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="lg:pl-[36rem] flex-1">
+      <div class="p-6">
+        <h1 class="text-4xl font-bold mb-8 text-gray-800">Leagues 5: Raging Echoes Task Route Planner</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Available Tasks -->
+          <TaskList :tasks="filteredTasks" @add-task="addTask" />
+
+          <!-- Your Route -->
+          <RouteBuilder :route="route" @update-route="updateRoute" />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import TaskList from './components/TaskList.vue';
+import RegionFilter from './components/RegionFilter.vue';
+import RouteBuilder from './components/RouteBuilder.vue';
+import axios from 'axios';
+
+export default {
+  components: { TaskList, RegionFilter, RouteBuilder },
+  data() {
+    return {
+      regions: [
+        { id: 2, name: 'Asgarnia' },
+        { id: 3, name: 'Fremenik' },
+        { id: 4, name: 'Kandarin' },
+        { id: 5, name: 'Desert' },
+        { id: 6, name: 'Morytania' },
+        { id: 7, name: 'Tirannywn' },
+        { id: 8, name: 'Wilderness' },
+        { id: 9, name: 'Zeah' },
+        { id: 10, name: 'Varlamore' },
+      ],
+      selectedRegions: [],
+      tasks: [], // Initially empty, will be loaded from tasks.json
+      route: [],
+      savedRoutes: {},
+      selectedRoute: '',
+      importedRoute: '',
+    };
+  },
+  computed: {
+    filteredTasks() {
+      const allowedRegions = ['Global', ...this.selectedRegions];
+      return this.tasks.filter(
+        (task) =>
+          allowedRegions.includes(task.region) &&
+          !this.route.some((r) => r.id === task.id) // Exclude already added tasks
+      );
+    },
+    totalPoints() {
+      return this.route.reduce((sum, task) => sum + task.points, 0);
+    },
+    completedPoints() {
+      return this.route.reduce((sum, task) => (task.completed ? sum + task.points : sum), 0);
+    },
+    progressPercentage() {
+      return this.totalPoints ? (this.completedPoints / this.totalPoints) * 100 : 0;
+    },
+  },
+  methods: {
+    updateRegions(regions) {
+      this.selectedRegions = regions;
+      localStorage.setItem('selectedRegions', JSON.stringify(regions));
+    },
+    addTask(task) {
+      this.route.push({ ...task, completed: false });
+      localStorage.setItem('route', JSON.stringify(this.route));
+    },
+    updateRoute(newRoute) {
+      this.route = newRoute;
+      localStorage.setItem('route', JSON.stringify(this.route));
+    },
+    saveRoute() {
+      const routeName = prompt('Enter a name for this route:');
+      if (routeName) {
+        this.savedRoutes[routeName] = JSON.stringify(this.route);
+        localStorage.setItem('savedRoutes', JSON.stringify(this.savedRoutes));
+        alert(`Route "${routeName}" has been saved.`);
+      }
+    },
+    loadRoute() {
+      if (this.selectedRoute && this.savedRoutes[this.selectedRoute]) {
+        this.route = JSON.parse(this.savedRoutes[this.selectedRoute]);
+        alert(`Route "${this.selectedRoute}" has been loaded.`);
+      }
+    },
+    shareRoute() {
+      const shareableRoute = JSON.stringify(this.route);
+      navigator.clipboard.writeText(shareableRoute).then(() => {
+        alert('Route copied to clipboard! Share it with others.');
+      });
+    },
+    importRoute() {
+      try {
+        const imported = JSON.parse(this.importedRoute);
+        const routeName = prompt('Enter a name for the imported route:');
+        if (routeName) {
+          this.savedRoutes[routeName] = JSON.stringify(imported);
+          localStorage.setItem('savedRoutes', JSON.stringify(this.savedRoutes));
+          alert(`Route "${routeName}" has been imported and saved.`);
+          this.importedRoute = ''; // Clear the textarea
+        }
+      } catch (error) {
+        alert('Invalid route JSON. Please try again.');
+      }
+    },
+    loadTasks() {
+      axios
+        .get('./tasks.json')
+        .then((response) => {
+          // Add task ID to the beginning of the task name
+          this.tasks = response.data.map((task) => ({
+            ...task,
+            task: `${task.id}: ${task.task}`, // Include task ID in task name
+          }));
+          console.log('Tasks loaded:', this.tasks);
+        })
+        .catch((error) => {
+          console.error('Error loading tasks:', error);
+        });
+    },
+  },
+  mounted() {
+    const savedRegions = localStorage.getItem('selectedRegions');
+    if (savedRegions) {
+      this.selectedRegions = JSON.parse(savedRegions);
+    }
+
+    const savedRoute = localStorage.getItem('route');
+    if (savedRoute) {
+      this.route = JSON.parse(savedRoute);
+    }
+
+    const savedRoutes = localStorage.getItem('savedRoutes');
+    if (savedRoutes) {
+      this.savedRoutes = JSON.parse(savedRoutes);
+    }
+
+    // Load the tasks from the JSON file when the component is mounted
+    this.loadTasks();
+  },
+};
+</script>
