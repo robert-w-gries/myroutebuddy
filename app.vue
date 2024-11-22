@@ -243,7 +243,7 @@ export default {
           // Add task ID to the beginning of the task name
           this.tasks = response.data.map((task) => ({
             ...task,
-            task: `${task.id}: ${task.task}`, // Include task ID in task name
+            task: `${task.task}`,
           }));
           console.log('Tasks loaded:', this.tasks);
         })
