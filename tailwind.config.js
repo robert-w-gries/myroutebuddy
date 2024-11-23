@@ -7,8 +7,11 @@ export default {
     './pages/**/*.vue',    // Includes pages
     './plugins/**/*.{js,ts}', // Includes plugins
   ],
+  darkMode: 'class', // Enables dark mode using a `class` toggle
   theme: {
     extend: {},
   },
-  plugins: [],
-}
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
+};
