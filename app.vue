@@ -213,6 +213,12 @@ export default {
       changeLog: [
       {
         date: 'November 22, 2024',
+        time: '10:58 PM',
+        change: 'Enable drag & drop for available tasks and your route list',
+        contributor: 'KennethLuczko',
+      },
+      {
+        date: 'November 22, 2024',
         time: '10:17 PM',
         change: 'Add change log and encourage contributions',
         contributor: 'KennethLuczko',
@@ -222,12 +228,6 @@ export default {
         time: '9:50 PM',
         change: 'Add dark mode functionality and hide scrollbar',
         contributor: 'KennethLuczko',
-      },
-      {
-        date: 'November 22, 2024',
-        time: '9:25 PM',
-        change: 'Corrected region spellings',
-        contributor: 'Skylord-Guthix',
       },
     ],
     };
@@ -268,13 +268,21 @@ export default {
         this.customTaskName = ''; // Reset input
       }
     },
+    updateTasks(updatedTasks) {
+      this.tasks = updatedTasks;
+      localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    },
     updateRegions(regions) {
       this.selectedRegions = regions;
       localStorage.setItem('selectedRegions', JSON.stringify(regions));
     },
     addTask(task) {
-      this.route.push({ ...task, completed: false });
-      localStorage.setItem('route', JSON.stringify(this.route));
+      if (!this.route.some((r) => r.id === task.id)) {
+        this.route.push({ ...task, completed: false });
+        localStorage.setItem('route', JSON.stringify(this.route));
+      } else {
+        alert('Task is already in your route.');
+      }
     },
     updateRoute(newRoute) {
       this.route = newRoute;
@@ -372,6 +380,13 @@ export default {
     const savedRoutes = localStorage.getItem('savedRoutes');
     if (savedRoutes) {
       this.savedRoutes = JSON.parse(savedRoutes);
+    }
+
+    const savedTasks = localStorage.getItem('tasks');
+    if (savedTasks) {
+      this.tasks = JSON.parse(savedTasks);
+    } else {
+      this.loadTasks();
     }
 
     // Load the tasks from the JSON file when the component is mounted
