@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky top-0 z-10">
+  <div class="sticky top-2 z-10">
     <div
       class="grid grid-cols-4 gap-4 p-4 bg-gray-50 border border-gray-200 dark:bg-gray-900 dark:border-gray-700 rounded-lg shadow-sm backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90"
     >
