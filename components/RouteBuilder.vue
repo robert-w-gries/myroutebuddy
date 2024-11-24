@@ -18,7 +18,7 @@
         v-for="(task, index) in filteredRoute"
         :key="task.id"
         :class="[
-          'p-4 rounded-lg shadow border hover:bg-gray-100 transition mb-2 relative',
+          'p-2 py-3 rounded-lg shadow border hover:bg-gray-100 transition mb-2 relative',
           task.completed ? 'bg-gray-200 line-through text-gray-500' : 'bg-gray-50 text-gray-800',
           task.custom ? 'border-blue-600 dark:border-green-600' : ''
         ]"
@@ -27,8 +27,14 @@
           {{ index + 1 }}
         </span>
 
-        <div class="flex items-center justify-between">
-          <div>
+        <div class="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            :checked="task.completed"
+            @change="toggleCompletion(task)"
+            class="flex-shrink-0 w-5 h-5 text-blue-500 rounded border-gray-300 focus:ring focus:ring-blue-200 cursor-pointer mr-[2px]"
+          />
+          <div class="flex-1">
             <!-- Editing Mode -->
             <div v-if="task.isEditing">
               <input
@@ -60,22 +66,13 @@
             </div>
           </div>
           <div class="flex items-center space-x-2">
-            <!-- Complete Task -->
-            <input
-              type="checkbox"
-              :checked="task.completed"
-              @change="toggleCompletion(task)"
-              class="w-5 h-5 text-blue-500 rounded border-gray-300 focus:ring focus:ring-blue-200 cursor-pointer"
-            />
-            <!-- Edit Button for Custom Tasks -->
             <button
-              v-if="task.custom"
+              v-if="task.custom && !task.isEditing"
               @click="editTask(task)"
               class="w-8 h-8 bg-yellow-500 text-white hover:bg-yellow-600 rounded-full shadow-sm flex items-center justify-center"
             >
               ✎
             </button>
-            <!-- Remove -->
             <button
               @click="removeTaskById(task.id)"
               class="w-8 h-8 bg-red-500 text-white hover:bg-red-600 rounded-full shadow-sm flex items-center justify-center"
