@@ -63,7 +63,7 @@
             </div>
             <!-- Display Mode -->
             <div v-else>
-              <h3 class="font-semibold mt-2 break-words max-w-lg">{{ task.task }}</h3>
+              <h3 class="font-semibold mt-2 break-words">{{ task.task }}</h3>
             </div>
           </div>
           <div class="flex items-center space-x-2 w-full pt-0.5">
