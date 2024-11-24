@@ -100,12 +100,19 @@
             <div class="flex items-center space-x-2 w-full pt-0.5">
               <p
                 :class="[
-                  'text-sm mr-auto',
+                  'text-sm mr-auto flex justify-center',
                   task.completed
                     ? 'text-gray-600'
                     : getMutedTextClass(task.color) || 'text-gray-600',
                 ]"
               >
+                <RegionIcon
+                  v-if="task.custom"
+                  :region="task.region"
+                  :is-custom="true"
+                  class="mr-2"
+                />
+                <RegionIcon v-else :region="task.region" class="mr-2" />
                 {{
                   task.custom ? "Custom Task / Note" : `${task.points} points`
                 }}
@@ -148,6 +155,7 @@
 import { Container, Draggable } from "vue3-smooth-dnd";
 import ColorSelect from "./ColorSelect.vue";
 import { colorMap } from "./ColorSelect.vue";
+import RegionIcon from "./RegionIcon.vue";
 
 export default {
   props: {
@@ -281,6 +289,7 @@ export default {
     Container,
     Draggable,
     ColorSelect,
+    RegionIcon,
   },
 };
 </script>
