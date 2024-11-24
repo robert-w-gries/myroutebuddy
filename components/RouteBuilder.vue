@@ -18,15 +18,19 @@
         v-for="(task, index) in filteredRoute"
         :key="task.id"
         :class="[
-          'p-2 py-3 rounded-lg shadow border hover:bg-gray-100 transition mb-2 relative',
-          task.completed ? 'bg-gray-200 line-through text-gray-500' : 'bg-gray-50 text-gray-800',
-          task.custom ? 'border-blue-600 dark:border-green-600' : ''
+          'p-2 py-3 rounded-lg shadow border transition mb-2 relative',
+          task.completed ? 'bg-gray-100 hover:bg-gray-200' : (task.color || 'bg-gray-50'),
+          !task.completed && (task.hoverColor || 'hover:bg-gray-100'),
+          task.completed ? 'border-gray-200' : (task.borderColor || (task.custom ? 'border-blue-600' : 'border-gray-200')),
         ]"
         drag-handler="handle"
       >
-        <span class="absolute top-1 left-1.5 text-xs text-gray-400 dark:text-gray-500 font-mono">
+      <span :class="[
+        'absolute top-1 left-1.5 text-xs font-mono',
+        task.completed ? 'text-gray-600' : (task.color ? 'text-white' : 'text-gray-600')
+        ]">
           {{ index + 1 }}
-        </span>
+      </span>
 
         <div class="flex items-center space-x-2">
           <input
@@ -37,64 +41,73 @@
           />
           <div class="flex-1">
             <div class="flex flex-col">
-            <!-- Editing Mode -->
-            <div v-if="task.isEditing">
-              <textarea
-                v-model="task.editableTask"
-                class="border p-2 rounded w-full mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y max-h-48"
-                rows="2"
-                @mousedown.stop 
-                @touchstart.stop
-              ></textarea>
-              <div class="flex space-x-2">
+              <!-- Editing Mode -->
+              <div v-if="task.isEditing">
+                <textarea
+                  v-model="task.editableTask"
+                  class="border p-2 rounded w-full mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y max-h-48"
+                  rows="2"
+                  @mousedown.stop 
+                  @touchstart.stop
+                ></textarea>
+                <div class="flex space-x-2">
+                  <button
+                    @click="saveEdit(task)"
+                    class="bg-green-500 text-white px-3 py-1 rounded shadow hover:bg-green-600 transition"
+                  >
+                    Save
+                  </button>
+                  <button
+                    @click="cancelEdit(task)"
+                    class="bg-gray-500 text-white px-3 py-1 rounded shadow hover:bg-gray-600 transition"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+              <!-- Display Mode -->
+              <div v-else>
+                <h3 :class="[
+                  'font-semibold mt-2 break-words',
+                  task.completed ? 'text-gray-600 line-through' : (task.textColor || 'text-gray-800 ')
+                ]">{{ task.task }}</h3>
+              </div>
+            </div>
+            <div class="flex items-center space-x-2 w-full pt-0.5">
+              <p :class="[
+                'text-sm mr-auto',
+                task.completed ? 'text-gray-600' : (task.mutedText || 'text-gray-600 ')
+              ]">
+                {{ task.custom ? 'Custom Task / Note' : `${task.points} points` }}
+              </p>
+              <div class="flex items-center space-x-2">
                 <button
-                  @click="saveEdit(task)"
-                  class="bg-green-500 text-white px-3 py-1 rounded shadow hover:bg-green-600 transition"
+                  v-if="task.custom && !task.isEditing"
+                  @click="editTask(task)"
+                  class="w-7 h-7 bg-yellow-500 text-white hover:bg-yellow-600 rounded-full shadow-sm flex items-center justify-center"
                 >
-                  Save
+                  ✎
+                </button>
+                <ColorSelect 
+                  :task="task"
+                  @update:task="updateTaskColor($event)"
+                />
+                <button
+                  v-if="!task.isEditing"
+                  @click="insertAfter(task)"
+                  class="w-7 h-7 bg-blue-500 text-white hover:bg-blue-600 rounded-full shadow-sm flex items-center justify-center"
+                >
+                  ↓
                 </button>
                 <button
-                  @click="cancelEdit(task)"
-                  class="bg-gray-500 text-white px-3 py-1 rounded shadow hover:bg-gray-600 transition"
+                  @click="removeTaskById(task.id)"
+                  class="w-7 h-7 bg-red-500 text-white hover:bg-red-600 rounded-full shadow-sm flex items-center justify-center"
                 >
-                  Cancel
+                  ✕
                 </button>
               </div>
             </div>
-            <!-- Display Mode -->
-            <div v-else>
-              <h3 class="font-semibold mt-2 break-words">{{ task.task }}</h3>
-            </div>
           </div>
-          <div class="flex items-center space-x-2 w-full pt-0.5">
-            <p class="text-sm text-gray-500 mr-auto">
-                {{ task.custom ? 'Custom Task / Note' : `${task.points} points` }}
-              </p>
-            <div class="flex items-center space-x-2">
-              <button
-              v-if="task.custom && !task.isEditing"
-              @click="editTask(task)"
-              class="w-7 h-7 bg-yellow-500 text-white hover:bg-yellow-600 rounded-full shadow-sm flex items-center justify-center"
-            >
-              ✎
-            </button>
-            <button
-              v-if="!task.isEditing"
-              @click="insertAfter(task)"
-              class="w-7 h-7 bg-blue-500 text-white hover:bg-blue-600 rounded-full shadow-sm flex items-center justify-center"
-            >
-              ↓
-            </button>
-            <button
-              @click="removeTaskById(task.id)"
-              class="w-7 h-7 bg-red-500 text-white hover:bg-red-600 rounded-full shadow-sm flex items-center justify-center"
-            >
-              ✕
-            </button>
-            </div>
-
-          </div>
-        </div>
         </div>
       </Draggable>
     </Container>
@@ -103,6 +116,7 @@
 
 <script>
 import { Container, Draggable } from 'vue3-smooth-dnd';
+import ColorPicker from './ColorSelect.vue'
 
 export default {
   props: {
@@ -204,10 +218,14 @@ export default {
       newRoute.splice(index + 1, 0, newTask);
       this.$emit('update-route', newRoute);
     },
+    updateTaskColor(updatedTask) {
+      this.updateTask(updatedTask);
+    },
   },
   components: {
     Container,
     Draggable,
+    ColorPicker
   },
 };
 </script>
