@@ -1,14 +1,5 @@
 <template>
   <div class="p-4 bg-white rounded-lg shadow mb-4 dark:bg-gray-800">
-    <h2 class="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">Available Tasks</h2>
-
-    <!-- Search Bar -->
-    <input
-      type="text"
-      v-model="searchQuery"
-      placeholder="Search tasks..."
-      class="w-full border rounded-lg p-2 mb-4 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
-    />
 
     <!-- Add Custom Task Section -->
     <div class="mb-6">
@@ -29,6 +20,15 @@
         Add Custom Task
       </button>
     </div>
+
+    <h2 class="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">Available Tasks</h2>
+
+    <input
+      type="text"
+      v-model="searchQuery"
+      placeholder="Search tasks..."
+      class="w-full border rounded-lg p-2 mb-4 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+    />
 
     <!-- Draggable Task List -->
     <Container
