@@ -63,7 +63,7 @@
               <h3 class="font-semibold mt-2">{{ task.task }}</h3>
             </div>
           </div>
-          <div class="flex items-center space-x-2 w-full">
+          <div class="flex items-center space-x-2 w-full pt-0.5">
             <p class="text-sm text-gray-500 mr-auto">
                 {{ task.custom ? 'Custom Task / Note' : `${task.points} points` }}
               </p>
@@ -74,6 +74,13 @@
               class="w-7 h-7 bg-yellow-500 text-white hover:bg-yellow-600 rounded-full shadow-sm flex items-center justify-center"
             >
               ✎
+            </button>
+            <button
+              v-if="!task.isEditing"
+              @click="insertAfter(task)"
+              class="w-7 h-7 bg-blue-500 text-white hover:bg-blue-600 rounded-full shadow-sm flex items-center justify-center"
+            >
+              ↓
             </button>
             <button
               @click="removeTaskById(task.id)"
@@ -176,6 +183,23 @@ export default {
         newRoute.splice(index, 1, updatedTask);
         this.$emit('update-route', newRoute);
       }
+    },
+    insertAfter(task) {
+      const index = this.route.findIndex(t => t.id === task.id);
+      const newTask = {
+        id: Date.now(),
+        task: '',
+        points: 0,
+        custom: true,
+        region: 'Global',
+        completed: false,
+        isEditing: true,
+        editableTask: ''
+      };
+      
+      const newRoute = [...this.route];
+      newRoute.splice(index + 1, 0, newTask);
+      this.$emit('update-route', newRoute);
     },
   },
   components: {
