@@ -32,9 +32,10 @@
             type="checkbox"
             :checked="task.completed"
             @change="toggleCompletion(task)"
-            class="flex-shrink-0 w-5 h-5 text-blue-500 rounded border-gray-300 focus:ring focus:ring-blue-200 cursor-pointer mr-[2px]"
+            class="flex-shrink-0 w-5 h-5 text-blue-500 rounded border-gray-300 focus:ring focus:ring-blue-200 cursor-pointer mr-1"
           />
           <div class="flex-1">
+            <div class="flex flex-col">
             <!-- Editing Mode -->
             <div v-if="task.isEditing">
               <input
@@ -60,26 +61,30 @@
             <!-- Display Mode -->
             <div v-else>
               <h3 class="font-semibold mt-2">{{ task.task }}</h3>
-              <p class="text-sm text-gray-500">
-                {{ task.custom ? 'Custom Task / Note' : `${task.points} points` }}
-              </p>
             </div>
           </div>
-          <div class="flex items-center space-x-2">
-            <button
+          <div class="flex items-center space-x-2 w-full">
+            <p class="text-sm text-gray-500 mr-auto">
+                {{ task.custom ? 'Custom Task / Note' : `${task.points} points` }}
+              </p>
+            <div class="flex items-center space-x-2">
+              <button
               v-if="task.custom && !task.isEditing"
               @click="editTask(task)"
-              class="w-8 h-8 bg-yellow-500 text-white hover:bg-yellow-600 rounded-full shadow-sm flex items-center justify-center"
+              class="w-7 h-7 bg-yellow-500 text-white hover:bg-yellow-600 rounded-full shadow-sm flex items-center justify-center"
             >
               ✎
             </button>
             <button
               @click="removeTaskById(task.id)"
-              class="w-8 h-8 bg-red-500 text-white hover:bg-red-600 rounded-full shadow-sm flex items-center justify-center"
+              class="w-7 h-7 bg-red-500 text-white hover:bg-red-600 rounded-full shadow-sm flex items-center justify-center"
             >
               ✕
             </button>
+            </div>
+
           </div>
+        </div>
         </div>
       </Draggable>
     </Container>
