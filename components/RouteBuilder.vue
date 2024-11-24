@@ -1,7 +1,14 @@
 <template>
-  <div :class="['p-4 bg-white rounded-lg shadow dark:bg-gray-800', isFinalView ? 'w-full' : '']">
-    <h2 class="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">Your Route</h2>
-    
+  <div
+    :class="[
+      'p-4 bg-white rounded-lg shadow dark:bg-gray-800',
+      isFinalView ? 'w-full' : '',
+    ]"
+  >
+    <h2 class="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">
+      Your Route
+    </h2>
+
     <input
       type="text"
       v-model="searchQuery"
@@ -18,19 +25,30 @@
         v-for="(task, index) in filteredRoute"
         :key="task.id"
         :class="[
-          'p-2 py-3 rounded-lg shadow border transition mb-2 relative',
-          task.completed ? 'bg-gray-100 hover:bg-gray-200' : (task.color || 'bg-gray-50'),
-          !task.completed && (task.hoverColor || 'hover:bg-gray-100'),
-          task.completed ? 'border-gray-200' : (task.borderColor || (task.custom ? 'border-blue-600' : 'border-gray-200')),
+          'p-2 py-3 rounded-lg shadow border transition mb-2 relative cursor-pointer',
+          task.completed
+            ? 'bg-gray-100 hover:bg-gray-200'
+            : getColorClass(task.color),
+          !task.completed && (getHoverClass(task.color) || 'hover:bg-gray-100'),
+          task.completed
+            ? 'border-gray-200'
+            : getBorderClass(task.color) ||
+              (task.custom ? 'border-blue-600' : 'border-gray-200'),
         ]"
         drag-handler="handle"
       >
-      <span :class="[
-        'absolute top-1 left-1.5 text-xs font-mono',
-        task.completed ? 'text-gray-600' : (task.color ? 'text-white' : 'text-gray-600')
-        ]">
+        <span
+          :class="[
+            'absolute top-1 left-1.5 text-xs font-mono',
+            task.completed
+              ? 'text-gray-600'
+              : task.color
+              ? getNumberClass(task.color)
+              : 'text-gray-600',
+          ]"
+        >
           {{ index + 1 }}
-      </span>
+        </span>
 
         <div class="flex items-center space-x-2">
           <input
@@ -47,7 +65,7 @@
                   v-model="task.editableTask"
                   class="border p-2 rounded w-full mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y max-h-48"
                   rows="2"
-                  @mousedown.stop 
+                  @mousedown.stop
                   @touchstart.stop
                 ></textarea>
                 <div class="flex space-x-2">
@@ -67,41 +85,53 @@
               </div>
               <!-- Display Mode -->
               <div v-else>
-                <h3 :class="[
-                  'font-semibold mt-2 break-words',
-                  task.completed ? 'text-gray-600 line-through' : (task.textColor || 'text-gray-800 ')
-                ]">{{ task.task }}</h3>
+                <h3
+                  :class="[
+                    'font-semibold mt-2 break-words',
+                    task.completed
+                      ? 'text-gray-600 line-through'
+                      : getTextClass(task.color) || 'text-gray-800',
+                  ]"
+                >
+                  {{ task.task }}
+                </h3>
               </div>
             </div>
             <div class="flex items-center space-x-2 w-full pt-0.5">
-              <p :class="[
-                'text-sm mr-auto',
-                task.completed ? 'text-gray-600' : (task.mutedText || 'text-gray-600 ')
-              ]">
-                {{ task.custom ? 'Custom Task / Note' : `${task.points} points` }}
+              <p
+                :class="[
+                  'text-sm mr-auto',
+                  task.completed
+                    ? 'text-gray-600'
+                    : getMutedTextClass(task.color) || 'text-gray-600',
+                ]"
+              >
+                {{
+                  task.custom ? "Custom Task / Note" : `${task.points} points`
+                }}
               </p>
               <div class="flex items-center space-x-2">
                 <button
                   v-if="task.custom && !task.isEditing"
                   @click="editTask(task)"
-                  class="w-7 h-7 bg-yellow-500 text-white hover:bg-yellow-600 rounded-full shadow-sm flex items-center justify-center"
+                  class="w-7 h-7 bg-yellow-500 text-white hover:bg-yellow-600 rounded-full shadow-sm flex items-center justify-center transition-all duration-200 hover:scale-110 hover:ring-2 hover:ring-offset-2 hover:ring-gray-200 ring-2 ring-white ring-inset"
                 >
                   ✎
                 </button>
-                <ColorSelect 
+                <ColorSelect
                   :task="task"
                   @update:task="updateTaskColor($event)"
                 />
                 <button
                   v-if="!task.isEditing"
                   @click="insertAfter(task)"
-                  class="w-7 h-7 bg-blue-500 text-white hover:bg-blue-600 rounded-full shadow-sm flex items-center justify-center"
+                  class="w-7 h-7 bg-blue-500 text-white hover:bg-blue-600 rounded-full shadow-sm flex items-center justify-center transition-all duration-200 hover:scale-110 hover:ring-2 hover:ring-offset-2 hover:ring-gray-200 ring-2 ring-white ring-inset"
                 >
                   ↓
                 </button>
                 <button
                   @click="removeTaskById(task.id)"
-                  class="w-7 h-7 bg-red-500 text-white hover:bg-red-600 rounded-full shadow-sm flex items-center justify-center"
+                  class="w-7 h-7 bg-red-500 text-white hover:bg-red-600 rounded-full shadow-sm flex items-center justify-center transition-all duration-200 hover:scale-110 hover:ring-2 hover:ring-offset-2 hover:ring-gray-200 ring-2 ring-white ring-inset"
                 >
                   ✕
                 </button>
@@ -115,8 +145,9 @@
 </template>
 
 <script>
-import { Container, Draggable } from 'vue3-smooth-dnd';
-import ColorPicker from './ColorSelect.vue'
+import { Container, Draggable } from "vue3-smooth-dnd";
+import ColorSelect from "./ColorSelect.vue";
+import { colorMap } from "./ColorSelect.vue";
 
 export default {
   props: {
@@ -128,17 +159,37 @@ export default {
   },
   data() {
     return {
-      searchQuery: '',
-    }
+      searchQuery: "",
+    };
   },
   computed: {
     filteredRoute() {
       if (!this.searchQuery) return this.route;
       const query = this.searchQuery.toLowerCase();
-      return this.route.filter(task => task.task.toLowerCase().includes(query));
-    }
+      return this.route.filter((task) =>
+        task.task.toLowerCase().includes(query)
+      );
+    },
   },
   methods: {
+    getColorClass(color) {
+      return color && colorMap[color] ? colorMap[color].bg : "bg-gray-50";
+    },
+    getHoverClass(color) {
+      return color && colorMap[color] ? colorMap[color].hover : null;
+    },
+    getBorderClass(color) {
+      return color && colorMap[color] ? colorMap[color].border : null;
+    },
+    getTextClass(color) {
+      return color && colorMap[color] ? colorMap[color].text : null;
+    },
+    getMutedTextClass(color) {
+      return color && colorMap[color] ? colorMap[color].mutedText : null;
+    },
+    getNumberClass(color) {
+      return color && colorMap[color] ? colorMap[color].number : null;
+    },
     getTaskPayload(index) {
       return this.filteredRoute[index];
     },
@@ -163,17 +214,17 @@ export default {
             if (dropResult.removedIndex !== null) {
               newRoute.splice(dropResult.addedIndex, 0, task);
             } else {
-              alert('Task is already in your route.');
+              alert("Task is already in your route.");
             }
           }
         }
 
-        this.$emit('update-route', newRoute);
+        this.$emit("update-route", newRoute);
       }
     },
     removeTaskById(taskId) {
       const updatedRoute = this.route.filter((task) => task.id !== taskId);
-      this.$emit('update-route', updatedRoute);
+      this.$emit("update-route", updatedRoute);
     },
     toggleCompletion(task) {
       const updatedTask = { ...task, completed: !task.completed };
@@ -184,7 +235,11 @@ export default {
       this.updateTask(updatedTask);
     },
     saveEdit(task) {
-      const updatedTask = { ...task, task: task.editableTask, isEditing: false };
+      const updatedTask = {
+        ...task,
+        task: task.editableTask,
+        isEditing: false,
+      };
       delete updatedTask.editableTask;
       this.updateTask(updatedTask);
     },
@@ -198,25 +253,25 @@ export default {
       if (index !== -1) {
         const newRoute = [...this.route];
         newRoute.splice(index, 1, updatedTask);
-        this.$emit('update-route', newRoute);
+        this.$emit("update-route", newRoute);
       }
     },
     insertAfter(task) {
-      const index = this.route.findIndex(t => t.id === task.id);
+      const index = this.route.findIndex((t) => t.id === task.id);
       const newTask = {
         id: Date.now(),
-        task: '',
+        task: "",
         points: 0,
         custom: true,
-        region: 'Global',
+        region: "Global",
         completed: false,
         isEditing: true,
-        editableTask: ''
+        editableTask: "",
       };
-      
+
       const newRoute = [...this.route];
       newRoute.splice(index + 1, 0, newTask);
-      this.$emit('update-route', newRoute);
+      this.$emit("update-route", newRoute);
     },
     updateTaskColor(updatedTask) {
       this.updateTask(updatedTask);
@@ -225,7 +280,7 @@ export default {
   components: {
     Container,
     Draggable,
-    ColorPicker
+    ColorSelect,
   },
 };
 </script>
