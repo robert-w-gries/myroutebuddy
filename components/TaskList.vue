@@ -37,7 +37,7 @@
       @drop="onDrop"
     >
       <Draggable
-        v-for="(task, index) in filteredTasks"
+        v-for="(task) in filteredTasks"
         :key="task.id"
         :data-id="task.id"
         class="flex justify-between items-center bg-gray-50 hover:bg-gray-100 p-4 rounded-lg shadow border cursor-pointer mb-2"

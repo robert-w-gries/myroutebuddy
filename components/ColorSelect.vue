@@ -1,7 +1,8 @@
 <template>
     <div class="relative color-select">
       <button
-        @click="isOpen = !isOpen"
+        @click="toggleDropdown"
+        ref="colorButton"
         :class="[
           'w-7 h-7 rounded-full shadow-sm flex items-center justify-center transition-all duration-200 hover:scale-110',
           task.color ? task.color : 'bg-gray-500',
@@ -12,36 +13,33 @@
         <span class="text-white"></span>
       </button>
   
-      <!-- Color Select Dropdown -->
-      <div
-        v-if="isOpen"
-        class="absolute right-full top-1/2 -translate-y-1/2 mr-2 flex flex-row gap-2 p-2 bg-white rounded-lg shadow-lg border transform origin-right transition-all duration-200"
-        :class="[
-          isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none',
-          'z-50'
-        ]"
-        @click.stop
-      >
-        <!-- Remove color option -->
-        <button
-          @click="removeColor"
-          class="w-7 h-7 bg-gray-100 rounded-full transition-all duration-200 hover:scale-110 hover:ring-2 hover:ring-offset-2 hover:ring-gray-200 ring-2 ring-gray-300 ring-inset flex items-center justify-center"
+      <Teleport to="body">
+        <div
+          v-if="isOpen"
+          :style="dropdownStyle"
+          class="fixed flex flex-row gap-2 p-2 bg-white rounded-lg shadow-lg border z-50"
+          @click.stop
         >
-          ✕
-        </button>
-        <button
-          v-for="color in colors"
-          :key="color.bg"
-          @click="selectColor(color)"
-          :class="[
-            'w-7 h-7 rounded-full transition-all duration-200 hover:scale-110',
-            color.bg,
-            'hover:ring-2 hover:ring-offset-2',
-            color.ring,
-            color.ringColor
-          ]"
-        ></button>
-      </div>
+          <button
+            @click="removeColor"
+            class="w-7 h-7 bg-gray-100 rounded-full transition-all duration-200 hover:scale-110 hover:ring-2 hover:ring-offset-2 hover:ring-gray-200 ring-2 ring-gray-300 ring-inset flex items-center justify-center"
+          >
+            ✕
+          </button>
+          <button
+            v-for="color in colors"
+            :key="color.bg"
+            @click="selectColor(color)"
+            :class="[
+              'w-7 h-7 rounded-full transition-all duration-200 hover:scale-110',
+              color.bg,
+              'hover:ring-2 hover:ring-offset-2',
+              color.ring,
+              color.ringColor
+            ]"
+          ></button>
+        </div>
+      </Teleport>
     </div>
 </template>
 
@@ -53,6 +51,10 @@ export default {
   data() {
     return {
       isOpen: false,
+      dropdownStyle: {
+        top: '0px',
+        left: '0px',
+      },
       colors: [
         { 
           bg: 'bg-red-500', 
@@ -118,12 +120,35 @@ export default {
     }
   },
   mounted() {
-    document.addEventListener('click', this.closeDropdown)
+    document.addEventListener('click', this.closeDropdown);
+    window.addEventListener('resize', this.updateDropdownPosition);
+    window.addEventListener('scroll', this.updateDropdownPosition, true);
   },
   beforeUnmount() {
-    document.removeEventListener('click', this.closeDropdown)
+    document.removeEventListener('click', this.closeDropdown);
+    window.removeEventListener('resize', this.updateDropdownPosition);
+    window.removeEventListener('scroll', this.updateDropdownPosition, true);
   },
   methods: {
+    toggleDropdown() {
+      this.isOpen = !this.isOpen;
+      if (this.isOpen) {
+        this.$nextTick(this.updateDropdownPosition);
+      }
+    },
+    updateDropdownPosition() {
+      const button = this.$refs.colorButton;
+      if (!this.isOpen || !button) return;
+      
+      const buttonRect = button.getBoundingClientRect();
+      const dropdownWidth = 244;
+      
+      this.dropdownStyle = {
+        top: `${buttonRect.top + (buttonRect.height / 2)}px`,
+        left: `${buttonRect.left - dropdownWidth - 24}px`,
+        transform: 'translateY(-50%)'
+      };
+    },
     selectColor(color) {
       this.$emit('update:task', {
         ...this.task,
@@ -133,12 +158,11 @@ export default {
         borderColor: color.borderColor,
         hoverColor: color.hoverColor,
         numberColor: color.numberColor
-      })
-      this.isOpen = false
+      });
+      this.isOpen = false;
     },
     removeColor() {
-      // Only remove the color-related properties, preserve the default text colors
-       this.$emit('update:task', {
+      this.$emit('update:task', {
         ...this.task,
         color: null,
         borderColor: this.task.custom ? 'border-blue-600' : 'border-gray-200',
@@ -146,13 +170,14 @@ export default {
         mutedText: 'text-gray-500',
         numberColor: 'text-gray-400',
         hoverColor: 'hover:bg-gray-100'
-      })
-      this.isOpen = false
+      });
+      this.isOpen = false;
     },
     closeDropdown(e) {
-      if (!e.target.closest('.color-select')) {
-        this.isOpen = false
+      if (e && e.target.closest('.color-select') && e.target.tagName === 'BUTTON') {
+        return;
       }
+      this.isOpen = false;
     }
   }
 }
