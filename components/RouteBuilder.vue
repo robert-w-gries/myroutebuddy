@@ -5,7 +5,9 @@
       isFinalView ? 'w-full' : '',
     ]"
   >
-    <h2 class="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">
+    <RouteStats :route="route" />
+
+    <h2 class="text-xl font-bold m-4 text-gray-800 dark:text-gray-200">
       Your Route
     </h2>
 
@@ -156,6 +158,7 @@ import { Container, Draggable } from "vue3-smooth-dnd";
 import ColorSelect from "./ColorSelect.vue";
 import { colorMap } from "./ColorSelect.vue";
 import RegionIcon from "./RegionIcon.vue";
+import RouteStats from "./RouteStats";
 
 export default {
   props: {
@@ -290,6 +293,7 @@ export default {
     Draggable,
     ColorSelect,
     RegionIcon,
+    RouteStats,
   },
 };
 </script>
