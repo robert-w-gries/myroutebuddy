@@ -1,13 +1,21 @@
 <template>
   <div :class="['p-4 bg-white rounded-lg shadow dark:bg-gray-800', isFinalView ? 'w-full' : '']">
     <h2 class="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">Your Route</h2>
+    
+    <input
+      type="text"
+      v-model="searchQuery"
+      placeholder="Search your route..."
+      class="w-full border rounded-lg p-2 mb-4 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+    />
+
     <Container
       :get-child-payload="getTaskPayload"
       group-name="tasks"
       @drop="onDrop"
     >
       <Draggable
-        v-for="(task, index) in route"
+        v-for="(task, index) in filteredRoute"
         :key="task.id"
         :class="[
           'p-4 rounded-lg shadow border hover:bg-gray-100 transition mb-2 relative',
@@ -82,7 +90,6 @@
 </template>
 
 <script>
-// Script remains unchanged
 import { Container, Draggable } from 'vue3-smooth-dnd';
 
 export default {
@@ -93,9 +100,21 @@ export default {
       default: false,
     },
   },
+  data() {
+    return {
+      searchQuery: '',
+    }
+  },
+  computed: {
+    filteredRoute() {
+      if (!this.searchQuery) return this.route;
+      const query = this.searchQuery.toLowerCase();
+      return this.route.filter(task => task.task.toLowerCase().includes(query));
+    }
+  },
   methods: {
     getTaskPayload(index) {
-      return this.route[index];
+      return this.filteredRoute[index];
     },
     onDrop(dropResult) {
       if (dropResult.removedIndex !== null || dropResult.addedIndex !== null) {
