@@ -22,6 +22,7 @@
           task.completed ? 'bg-gray-200 line-through text-gray-500' : 'bg-gray-50 text-gray-800',
           task.custom ? 'border-blue-600 dark:border-green-600' : ''
         ]"
+        drag-handler="handle"
       >
         <span class="absolute top-1 left-1.5 text-xs text-gray-400 dark:text-gray-500 font-mono">
           {{ index + 1 }}
@@ -38,11 +39,13 @@
             <div class="flex flex-col">
             <!-- Editing Mode -->
             <div v-if="task.isEditing">
-              <input
-                type="text"
+              <textarea
                 v-model="task.editableTask"
-                class="border p-2 rounded w-full mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+                class="border p-2 rounded w-full mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y max-h-48"
+                rows="2"
+                @mousedown.stop 
+                @touchstart.stop
+              ></textarea>
               <div class="flex space-x-2">
                 <button
                   @click="saveEdit(task)"
@@ -60,7 +63,7 @@
             </div>
             <!-- Display Mode -->
             <div v-else>
-              <h3 class="font-semibold mt-2">{{ task.task }}</h3>
+              <h3 class="font-semibold mt-2 break-words max-w-lg">{{ task.task }}</h3>
             </div>
           </div>
           <div class="flex items-center space-x-2 w-full pt-0.5">
