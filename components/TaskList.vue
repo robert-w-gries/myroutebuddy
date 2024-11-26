@@ -91,8 +91,9 @@ export default {
         };
         this.$emit("add-task", customTask);
         this.customTaskName = "";
+        this.$emit("notify", 'Custom task added.', 'success');
       } else {
-        alert("Please enter a task or note.");
+        this.$emit("notify", 'Please enter a task or note.', 'error');
       }
     },
     getTaskPayload(index) {
