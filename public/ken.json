@@ -1,5 +1,4 @@
-{
-  "route": [
+[
     {
       "id": 1732655174924,
       "task": "Mazhar's Guide + minor personal changes\nT / F / Z",
@@ -2219,10 +2218,4 @@
       "completed": false,
       "color": "blue"
     }
-  ],
-  "regions": [
-    "Zeah",
-    "Tirannwn",
-    "Fremennik"
-  ]
-}
+]

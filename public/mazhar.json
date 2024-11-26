@@ -1,5 +1,4 @@
-{
-  "route": [
+[
     {
       "id": 20,
       "region": "Global",
@@ -2189,10 +2188,4 @@
       "completed": false,
       "color": "blue"
     }
-  ],
-  "regions": [
-    "Zeah",
-    "Tirannwn",
-    "Fremennik"
-  ]
-}
+]
