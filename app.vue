@@ -113,7 +113,7 @@
 
             <!-- Reset App -->
             <button
-              @click="resetApp"
+              @click="confirmResetApp"
               class="w-full bg-red-500 text-white px-4 py-2 rounded-lg shadow-sm hover:bg-red-600 transition dark:bg-red-700 dark:hover:bg-red-800"
             >
               Reset
@@ -225,7 +225,7 @@
         <div>
           <div v-if="!isFinalView" class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Available Tasks -->
-            <TaskList :tasks="filteredTasks" @add-task="addTask" />
+            <TaskList :tasks="filteredTasks" @add-task="addTask" @notify="addNotification" />
 
             <!-- Your Route -->
             <RouteBuilder :route="route" @update-route="updateRoute" />
@@ -238,8 +238,17 @@
         </div>
       </div>
     </div>
-    
   </div>
+  <!-- Include the Notification Component -->
+  <Notification :notifications="notifications" @remove-notification="removeNotification" />
+
+  <!-- Include the Confirm Dialog Component -->
+  <ConfirmDialog
+  :show="showConfirmDialog"
+  :message="confirmMessage"
+  @confirm="handleConfirm"
+  @cancel="handleCancel"
+  />
 </template>
 
 <script>
@@ -248,6 +257,10 @@ import RegionFilter from './components/RegionFilter.vue';
 import RouteBuilder from './components/RouteBuilder.vue';
 import axios from 'axios';
 import { onMounted, onUnmounted, ref } from "vue"; 
+import LZString from 'lz-string';
+import Notification from './components/Notification.vue';
+import ConfirmDialog from './components/ConfirmDialog.vue';
+
 export default {
   components: { TaskList, RegionFilter, RouteBuilder },
   data() {
@@ -275,6 +288,10 @@ export default {
       intervalId: null,
       timeUntilLaunch: '', // Countdown string
       isCollapsed: false,
+      notifications: [],
+      showConfirmDialog: false,
+      confirmMessage: '',
+      confirmAction: null,
     };
   },
   computed: {
@@ -326,35 +343,39 @@ export default {
       localStorage.setItem('selectedRegions', JSON.stringify(regions));
     },
     addTask(task) {
-      if (!this.route.some((r) => r.id === task.id)) {
-        this.route.push({ ...task, completed: false });
-        localStorage.setItem('route', JSON.stringify(this.route));
-      } else {
-        alert('Task is already in your route.');
-      }
-    },
+    if (!this.route.some((r) => r.id === task.id)) {
+      this.route.push({ ...task, completed: false });
+      localStorage.setItem('route', JSON.stringify(this.route));
+    } else {
+      this.addNotification('Task is already in your route.', 'error');
+    }
+  },
     updateRoute(newRoute) {
       this.route = newRoute;
       localStorage.setItem('route', JSON.stringify(this.route));
     },
     saveRoute() {
-      const routeName = prompt('Enter a name for this route:');
-      if (routeName) {
-        this.savedRoutes[routeName] = JSON.stringify(this.route);
-        localStorage.setItem('savedRoutes', JSON.stringify(this.savedRoutes));
-        alert(`Route "${routeName}" has been saved.`);
-      }
+    const routeName = prompt('Enter a name for this route:');
+    if (routeName) {
+      this.savedRoutes[routeName] = JSON.stringify(this.route);
+      localStorage.setItem('savedRoutes', JSON.stringify(this.savedRoutes));
+      this.addNotification(`Route "${routeName}" has been saved.`, 'success');
+    }
     },
     loadRoute() {
       if (this.selectedRoute && this.savedRoutes[this.selectedRoute]) {
         this.route = JSON.parse(this.savedRoutes[this.selectedRoute]);
-        alert(`Route "${this.selectedRoute}" has been loaded.`);
+        this.addNotification(`Route "${this.selectedRoute}" has been loaded.`, 'success');
       }
     },
     shareRoute() {
-      const shareableRoute = JSON.stringify(this.route);
-      navigator.clipboard.writeText(shareableRoute).then(() => {
-        alert('Route copied to clipboard! Share it with others.');
+      const routeString = JSON.stringify(this.route);
+      const regionsString = JSON.stringify(this.selectedRegions);
+      const compressedRoute = LZString.compressToEncodedURIComponent(routeString);
+      const compressedRegions = LZString.compressToEncodedURIComponent(regionsString);
+      const shareableURL = `${window.location.origin}${window.location.pathname}?route=${compressedRoute}&regions=${compressedRegions}`;
+      navigator.clipboard.writeText(shareableURL).then(() => {
+        this.addNotification('Shareable URL copied to clipboard! Share it with others.', 'success');
       });
     },
     importRoute() {
@@ -364,21 +385,25 @@ export default {
         if (routeName) {
           this.savedRoutes[routeName] = JSON.stringify(imported);
           localStorage.setItem('savedRoutes', JSON.stringify(this.savedRoutes));
-          alert(`Route "${routeName}" has been imported and saved.`);
+          this.addNotification(`Route "${routeName}" has been imported and saved.`, 'success');
           this.importedRoute = '';
         }
       } catch (error) {
-        alert('Invalid route JSON. Please try again.');
+        this.addNotification('Invalid route JSON. Please try again.', 'error');
       }
     },
     resetApp() {
-      if (confirm('Are you sure you want to reset? This will clear your route and selected regions.')) {
-        this.route = [];
-        this.selectedRegions = [];
-        localStorage.removeItem('route');
-        localStorage.removeItem('selectedRegions');
-        alert('App has been reset.');
-      }
+      this.route = [];
+      this.selectedRegions = [];
+      localStorage.removeItem('route');
+      localStorage.removeItem('selectedRegions');
+
+      // Clear the route parameter from the URL
+      const url = new URL(window.location);
+      url.searchParams.delete('route');
+      window.history.replaceState({}, document.title, url.toString());
+
+      this.addNotification('App has been reset.', 'success');
     },
     toggleDarkMode() {
       const html = document.documentElement;
@@ -454,10 +479,63 @@ export default {
     },
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  
+    },
+    addNotification(message, type = 'info') {
+    const id = Date.now();
+    this.notifications.push({ id, message, type });
+    setTimeout(() => {
+      this.notifications = this.notifications.filter(n => n.id !== id);
+    }, 3000); // Notification will disappear after 3 seconds
+    },
+    removeNotification(id) {
+      this.notifications = this.notifications.filter(n => n.id !== id);
+    },
+    showConfirm(message, action) {
+    this.confirmMessage = message;
+    this.confirmAction = action;
+    this.showConfirmDialog = true;
+    },
+    handleConfirm() {
+      if (this.confirmAction) {
+        this.confirmAction();
+      }
+      this.showConfirmDialog = false;
+    },
+    handleCancel() {
+      this.showConfirmDialog = false;
+    },
+    confirmResetApp() {
+    this.showConfirm('Are you sure you want to reset? This will clear your route and selected regions.', this.resetApp);
   },
+},
   mounted() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const routeParam = urlParams.get('route');
+    let routeLoadedFromURL = false;
+
+    if (routeParam) {
+      try {
+        const decompressed = LZString.decompressFromEncodedURIComponent(routeParam);
+        const importedRoute = JSON.parse(decompressed);
+        this.route = importedRoute;
+        this.addNotification('Route imported from URL.', 'success');
+        routeLoadedFromURL = true;
+      } catch (error) {
+        console.error('Error importing route from URL:', error);
+      }
+    }
+
+    const regionsParam = urlParams.get('regions');
+    if (regionsParam) {
+      try {
+        const decompressedRegions = LZString.decompressFromEncodedURIComponent(regionsParam);
+        const importedRegions = JSON.parse(decompressedRegions);
+        this.selectedRegions = importedRegions;
+      } catch (error) {
+        console.error('Error importing regions from URL:', error);
+      }
+    }
+    
     this.updateTimeUntilLaunch();
     this.intervalId = setInterval(this.updateTimeUntilLaunch, 1000);
 
@@ -472,7 +550,7 @@ export default {
     }
 
     const savedRoute = localStorage.getItem('route');
-    if (savedRoute) {
+    if (!routeLoadedFromURL && savedRoute) {
       this.route = JSON.parse(savedRoute);
     }
 
@@ -518,6 +596,18 @@ export default {
   beforeDestroy() {
     clearInterval(this.intervalId);
     window.removeEventListener("scroll", this.handleScroll);
+  },
+  watch: {
+    route: {
+      handler(newRoute) {
+        const routeString = JSON.stringify(newRoute);
+        const compressed = LZString.compressToEncodedURIComponent(routeString);
+        const url = new URL(window.location);
+        url.searchParams.set('route', compressed);
+        window.history.replaceState({}, document.title, url.toString());
+      },
+      deep: true,
+    },
   },
 };
 </script>
