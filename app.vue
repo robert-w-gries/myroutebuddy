@@ -771,7 +771,7 @@ export default {
     // Define the default routes
     const defaultRoutes = [
       { name: 'Wizzy (Updated 11/26 3:55 PM)', file: './wizzy.json' },
-      { name: 'Mazhar (Updated 11/25 9:09 AM)', file: './mazhar.json' },
+      { name: 'Mazhar (Updated 11/26 4:04 PM)', file: './mazhar.json' },
       { name: 'Doubleshine (Updated 11/25 10:04 PM)', file: './doubleshine.json' },
       { name: 'Lilratbag (Updated 11/26 8:54 AM)', file: './lilratbag.json' },
     ];
