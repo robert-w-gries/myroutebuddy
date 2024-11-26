@@ -248,6 +248,8 @@ import RegionFilter from './components/RegionFilter.vue';
 import RouteBuilder from './components/RouteBuilder.vue';
 import axios from 'axios';
 import { onMounted, onUnmounted, ref } from "vue"; 
+import LZString from 'lz-string';
+
 export default {
   components: { TaskList, RegionFilter, RouteBuilder },
   data() {
@@ -352,9 +354,13 @@ export default {
       }
     },
     shareRoute() {
-      const shareableRoute = JSON.stringify(this.route);
-      navigator.clipboard.writeText(shareableRoute).then(() => {
-        alert('Route copied to clipboard! Share it with others.');
+      const routeString = JSON.stringify(this.route);
+      const regionsString = JSON.stringify(this.selectedRegions);
+      const compressedRoute = LZString.compressToEncodedURIComponent(routeString);
+      const compressedRegions = LZString.compressToEncodedURIComponent(regionsString);
+      const shareableURL = `${window.location.origin}${window.location.pathname}?route=${compressedRoute}&regions=${compressedRegions}`;
+      navigator.clipboard.writeText(shareableURL).then(() => {
+        alert('Shareable URL copied to clipboard! Share it with others.');
       });
     },
     importRoute() {
@@ -377,6 +383,12 @@ export default {
         this.selectedRegions = [];
         localStorage.removeItem('route');
         localStorage.removeItem('selectedRegions');
+
+        // Clear the route parameter from the URL
+        const url = new URL(window.location);
+        url.searchParams.delete('route');
+        window.history.replaceState({}, document.title, url.toString());
+
         alert('App has been reset.');
       }
     },
@@ -458,6 +470,33 @@ export default {
   
   },
   mounted() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const routeParam = urlParams.get('route');
+    let routeLoadedFromURL = false;
+
+    if (routeParam) {
+      try {
+        const decompressed = LZString.decompressFromEncodedURIComponent(routeParam);
+        const importedRoute = JSON.parse(decompressed);
+        this.route = importedRoute;
+        alert('Route imported from URL.');
+        routeLoadedFromURL = true;
+      } catch (error) {
+        console.error('Error importing route from URL:', error);
+      }
+    }
+
+    const regionsParam = urlParams.get('regions');
+    if (regionsParam) {
+      try {
+        const decompressedRegions = LZString.decompressFromEncodedURIComponent(regionsParam);
+        const importedRegions = JSON.parse(decompressedRegions);
+        this.selectedRegions = importedRegions;
+      } catch (error) {
+        console.error('Error importing regions from URL:', error);
+      }
+    }
+    
     this.updateTimeUntilLaunch();
     this.intervalId = setInterval(this.updateTimeUntilLaunch, 1000);
 
@@ -472,7 +511,7 @@ export default {
     }
 
     const savedRoute = localStorage.getItem('route');
-    if (savedRoute) {
+    if (!routeLoadedFromURL && savedRoute) {
       this.route = JSON.parse(savedRoute);
     }
 
@@ -518,6 +557,18 @@ export default {
   beforeDestroy() {
     clearInterval(this.intervalId);
     window.removeEventListener("scroll", this.handleScroll);
+  },
+  watch: {
+    route: {
+      handler(newRoute) {
+        const routeString = JSON.stringify(newRoute);
+        const compressed = LZString.compressToEncodedURIComponent(routeString);
+        const url = new URL(window.location);
+        url.searchParams.set('route', compressed);
+        window.history.replaceState({}, document.title, url.toString());
+      },
+      deep: true,
+    },
   },
 };
 </script>
