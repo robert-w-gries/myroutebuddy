@@ -1,9 +1,9 @@
 <template>
-    <transition-group name="slide-fade" tag="div" class="fixed top-5 right-5 z-50">
-      <div
+    <transition-group name="slide-fade" tag="div" class="fixed top-3 right-0 left-3 z-50 mx-auto">
+    <div
         v-for="(notification, index) in notifications"
         :key="notification.id"
-        class="w-[560px] w-full mb-4"
+        class="max-w-lg mb-4"
       >
         <div
           :class="[
@@ -37,10 +37,6 @@
           <div class="ml-4 flex-shrink-0 flex">
             <button @click="removeNotification(notification.id)" class="inline-flex text-white focus:outline-none focus:ring-2 focus:ring-white">
               <span class="sr-only">Close</span>
-              <!-- Close Icon -->
-              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-              </svg>
             </button>
           </div>
         </div>

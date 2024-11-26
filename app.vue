@@ -485,7 +485,7 @@ export default {
     this.notifications.push({ id, message, type });
     setTimeout(() => {
       this.notifications = this.notifications.filter(n => n.id !== id);
-    }, 3000); // Notification will disappear after 3 seconds
+    }, 2000); // Notification will disappear after 3 seconds
     },
     removeNotification(id) {
       this.notifications = this.notifications.filter(n => n.id !== id);
