@@ -200,9 +200,6 @@
             this GitHub and contribute.
           </a>
         </h2>
-        <h3 class="text-md mb-2 text-gray-800 dark:text-gray-200">
-          <span class="text-red-600">This app will not work well on mobile.</span> This is easily fixed with Tailwind CSS if someone wants to contribute.
-        </h3>
         <h3 class="text-md mb-8 text-gray-800 dark:text-gray-200">
           Not sure where to begin? Discover your regions, combat masteries, and more
           <a href="https://docs.google.com/spreadsheets/d/1LJVEIIR9D56FF9PyUzb4nhofaCjpzSWTRGsUNsH7lNw/copy" 
@@ -488,6 +485,7 @@ export default {
       { name: 'Wizzy (V/W/T) (6/4/0) (Harpoon) (Clue Relic) (Updated 11/23 12:36 AM)', file: './wizzy.json' },
       { name: 'Mazhar (Z/M/F) (Updated 11/25 9:09 AM)', file: './mazhar.json' },
       { name: 'Doubleshine 76+ Tasks, 1000+ Points, Relic Neutral, No Competition, Minimal Skilling/Combat Tasks (Updated 11/25 10:04 PM)', file: './doubleshine.json' },
+      { name: 'Lilratbag (Updated 11/26 8:54 AM)', file: './doubleshine.json' },
     ];
 
     // Load each default route if not already present
