@@ -271,7 +271,7 @@ export default {
       launchDate: new Date('2024-11-27T07:00:00-05:00'), // Launch date in EST
       intervalId: null,
       timeUntilLaunch: '', // Countdown string
-      isCollapsed: true,
+      isCollapsed: false,
     };
   },
   computed: {
