@@ -770,6 +770,7 @@ export default {
     window.addEventListener("scroll", this.handleScroll);
     // Define the default routes
     const defaultRoutes = [
+      { name: 'Ken (Updated 11/26 4:05 PM)', file: './ken.json' },
       { name: 'Wizzy (Updated 11/26 3:55 PM)', file: './wizzy.json' },
       { name: 'Mazhar (Updated 11/26 4:04 PM)', file: './mazhar.json' },
       { name: 'Doubleshine (Updated 11/25 10:04 PM)', file: './doubleshine.json' },
