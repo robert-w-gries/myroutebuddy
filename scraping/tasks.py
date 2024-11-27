@@ -49,6 +49,7 @@ if select:
 
     # Initialize an empty list to store the tasks
     tasks = []
+    wiki_tasks = {}
     
     # Initialize task id counter
     task_id = 1
@@ -57,15 +58,24 @@ if select:
     for row in task_table.find_all('tr')[1:]:  # Skip the header row
         columns = row.find_all('td')
 
+        region = row.attrs['data-tbz-area-for-filtering'] if 'data-tbz-area-for-filtering' in row.attrs else ''
         # Ensure the row has the required number of columns (at least 2)
         if len(columns) >= 3:
-            wiki_region = row.attrs['data-tbz-area-for-filtering'] if 'data-tbz-area-for-filtering' in row.attrs else ''
-            task_region = WIKI_REGION_TO_ROUTE_REGION_MAP[wiki_region] if wiki_region else ''
-            task_name = columns[2].text.strip() 
+            task_region = WIKI_REGION_TO_ROUTE_REGION_MAP[region] if region else ''
+            task_name = columns[2].text.strip()
             task_points = columns[4].text.strip()
 
             # Debugging output for task points
             print(f"Region: {task_region} | Task: {task_name} | Points: {task_points}")
+            
+            wiki_tasks[task_id] = {
+                "id": row.attrs["data-taskid"] if "data-taskid" in row.attrs else "",
+                "region": region.capitalize(),
+                "name": columns[1].text.strip(),
+                "task": task_name,
+                "requirements": columns[3].text.strip(),
+                "pts": task_points,
+            }
 
             try:
                 # Attempt to convert points to integer
@@ -80,10 +90,14 @@ if select:
             except ValueError:
                 # If points are not a valid integer, print the task and its points
                 print(f"Skipping task with invalid points: {task_name} | Invalid points value: {task_points}")
-    
+
     # Save the tasks to a JSON file
     with open('public/tasks.json', 'w') as json_file:
         json.dump(tasks, json_file, indent=2)
+        
+    # Save the tasks to a JSON file
+    with open('public/wiki_tasks.json', 'w', encoding='utf-8') as json_file:
+        json.dump(wiki_tasks, json_file, indent=2)
 
     print("Tasks have been scraped and saved to tasks.json.")
 else:

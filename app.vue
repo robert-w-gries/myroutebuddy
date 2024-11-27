@@ -136,6 +136,14 @@
               Share Route
             </button>
 
+            <!-- Export Route -->
+            <button
+              @click="exportToWiki"
+              class="w-full bg-yellow-300 text-white px-4 py-2 rounded-lg shadow-sm hover:bg-yellow-600 transition dark:bg-yellow-700 dark:hover:bg-yellow-800"
+            >
+              Export Route
+            </button>
+
             <!-- Import Route -->
             <div>
               <textarea
@@ -301,6 +309,7 @@ import { onMounted, onUnmounted, ref } from "vue";
 import LZString from 'lz-string';
 import Notification from './components/Notification.vue';
 import ConfirmDialog from './components/ConfirmDialog.vue';
+import { getWikiFormat } from './wiki/export';
 
 export default {
   components: { TaskList, RegionFilter, RouteBuilder },
@@ -461,6 +470,17 @@ export default {
 
       console.log('Shareable Link:', shareableURL);
       console.log('Route JSON:', routeData);
+    },
+    async exportToWiki() {
+      let wikiTasksData = null;
+      try {
+        wikiTasksData = (await axios.get('./wiki_tasks.json')).data;
+      } catch (e) {
+        console.error('Error loading tasks:', error);
+        return;
+      }
+
+      console.log(getWikiFormat(this.route, wikiTasksData));
     },
     importRoute() {
       try {

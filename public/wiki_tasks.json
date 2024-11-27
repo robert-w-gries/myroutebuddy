@@ -1,0 +1,2890 @@
+{
+  "1": {
+    "id": "193",
+    "region": "General",
+    "name": "Achieve Your First Level 10",
+    "task": "Reach level 10 in any skill (not including Agility and Hitpoints)",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "2": {
+    "id": "194",
+    "region": "General",
+    "name": "Achieve Your First Level 20",
+    "task": "Reach level 20 in any skill",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "3": {
+    "id": "192",
+    "region": "General",
+    "name": "Achieve Your First Level 5",
+    "task": "Reach level 5 in any skill (not including Agility, Hitpoints and Runecraft)",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "4": {
+    "id": "191",
+    "region": "General",
+    "name": "Achieve Your First Level Up",
+    "task": "Level up any of your skills for the first time",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "5": {
+    "id": "297",
+    "region": "General",
+    "name": "Burn Some Food",
+    "task": "Burn any kind of food while trying to cook it",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "6": {
+    "id": "371",
+    "region": "General",
+    "name": "Burn Some Normal Logs",
+    "task": "Burn some Normal Logs",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "7": {
+    "id": "372",
+    "region": "General",
+    "name": "Burn Some Oak Logs",
+    "task": "Burn some Oak Logs",
+    "requirements": "15 Firemaking",
+    "pts": "10"
+  },
+  "8": {
+    "id": "97",
+    "region": "General",
+    "name": "Bury Some Bones",
+    "task": "Bury any kind of Bones",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "9": {
+    "id": "1151",
+    "region": "General",
+    "name": "Buy Something From Trader Crewmembers",
+    "task": "Buy something from the Trader Crewmembers",
+    "requirements": "2",
+    "pts": "10"
+  },
+  "10": {
+    "id": "431",
+    "region": "General",
+    "name": "Cast Home Teleport",
+    "task": "Cast the Home Teleport spell",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "11": {
+    "id": "379",
+    "region": "General",
+    "name": "Catch a Baby Impling",
+    "task": "Catch a Baby Impling",
+    "requirements": "17 Hunter",
+    "pts": "10"
+  },
+  "12": {
+    "id": "341",
+    "region": "General",
+    "name": "Catch a Herring",
+    "task": "Catch a Raw Herring whilst Fishing",
+    "requirements": "10 Fishing",
+    "pts": "10"
+  },
+  "13": {
+    "id": "340",
+    "region": "General",
+    "name": "Catch a Shrimp",
+    "task": "Catch Raw Shrimp while Fishing",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "14": {
+    "id": "342",
+    "region": "General",
+    "name": "Catch an Anchovy",
+    "task": "Catch a Raw Anchovy whilst Fishing",
+    "requirements": "15 Fishing",
+    "pts": "10"
+  },
+  "15": {
+    "id": "319",
+    "region": "General",
+    "name": "Check Your Slayer Task",
+    "task": "Use an Enchanted Gem to check your Slayer Task",
+    "requirements": "1 to purchase an enchanted gem",
+    "pts": "10"
+  },
+  "16": {
+    "id": "289",
+    "region": "General",
+    "name": "Chop Some Logs",
+    "task": "Chop any kind of logs",
+    "requirements": "Any axe",
+    "pts": "10"
+  },
+  "17": {
+    "id": "290",
+    "region": "General",
+    "name": "Chop Some Logs With a Steel Axe",
+    "task": "Chop any kind of logs using a Steel Axe",
+    "requirements": "6 Woodcutting",
+    "pts": "10"
+  },
+  "18": {
+    "id": "1785",
+    "region": "General",
+    "name": "Clean 15 Grimy Tarromin",
+    "task": "Clean 15 Grimy Tarromin",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "19": {
+    "id": "1784",
+    "region": "General",
+    "name": "Clean 25 Grimy Guam Leafs",
+    "task": "Clean 25 Grimy Guam Leafs",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "20": {
+    "id": "391",
+    "region": "General",
+    "name": "Clean a Grimy Guam",
+    "task": "Clean a Grimy Guam",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "21": {
+    "id": "190",
+    "region": "General",
+    "name": "Complete the Leagues Tutorial",
+    "task": "Complete the Leagues Tutorial and begin your adventure",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "22": {
+    "id": "296",
+    "region": "General",
+    "name": "Cook Shrimp",
+    "task": "Cook Raw Shrimp",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "23": {
+    "id": "333",
+    "region": "General",
+    "name": "Craft a Leather Body",
+    "task": "Craft a Leather Body",
+    "requirements": "14 CraftingEither  Asgarnia\u2713 ( 40 ),  Kandarin\u2713 ( 40 ),  Kourend\u2713,  Desert\u2713, or  Morytania\u2713 for easier access. In a worst case scenario,  Fremennik\u2713 with  78  and   Fremennik Hard Diary, or Grimoire relic to cast Tan Leather",
+    "pts": "10"
+  },
+  "24": {
+    "id": "1367",
+    "region": "General",
+    "name": "Create a Compost Potion",
+    "task": "Create a Compost Potion",
+    "requirements": "22 Herblore",
+    "pts": "10"
+  },
+  "25": {
+    "id": "1366",
+    "region": "General",
+    "name": "Create an Antipoison",
+    "task": "Create an Antipoison",
+    "requirements": "5 Herblore",
+    "pts": "10"
+  },
+  "26": {
+    "id": "1287",
+    "region": "General",
+    "name": "Cry in a wheat field",
+    "task": "Cry in a wheat field",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "27": {
+    "id": "332",
+    "region": "General",
+    "name": "Cut a Sapphire",
+    "task": "Cut a Sapphire",
+    "requirements": "20 Crafting",
+    "pts": "10"
+  },
+  "28": {
+    "id": "1288",
+    "region": "General",
+    "name": "Dance in a graveyard",
+    "task": "Dance in a graveyard",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "29": {
+    "id": "63",
+    "region": "General",
+    "name": "Defeat a Goblin",
+    "task": "Defeat a Goblin",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "30": {
+    "id": "64",
+    "region": "General",
+    "name": "Defeat a Guard",
+    "task": "Defeat a Guard",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "31": {
+    "id": "61",
+    "region": "General",
+    "name": "Defeat a Moss Giant",
+    "task": "Defeat a Moss Giant",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "32": {
+    "id": "393",
+    "region": "General",
+    "name": "Drink a Strength Potion",
+    "task": "Drink a Strength Potion",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "33": {
+    "id": "1269",
+    "region": "General",
+    "name": "Dye a cape orange",
+    "task": "Dye a cape orange",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "34": {
+    "id": "1800",
+    "region": "General",
+    "name": "Eat a Banana",
+    "task": "Eat a Banana",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "35": {
+    "id": "1268",
+    "region": "General",
+    "name": "Enter Puro Puro from Gielinor",
+    "task": "Enter Puro Puro from a crop circle in mainland Gielinor",
+    "requirements": "17 Hunter",
+    "pts": "10"
+  },
+  "36": {
+    "id": "649",
+    "region": "General",
+    "name": "Enter your Player Owned House",
+    "task": "Enter your Player Owned House",
+    "requirements": "1,000 or completion of   Daddy's Home",
+    "pts": "10"
+  },
+  "37": {
+    "id": "321",
+    "region": "General",
+    "name": "Equip a Spiny Helmet",
+    "task": "Equip a Spiny Helmet",
+    "requirements": "5 Defence650 to purchase from store",
+    "pts": "10"
+  },
+  "38": {
+    "id": "421",
+    "region": "General",
+    "name": "Equip a Studded Body and Chaps",
+    "task": "Equip a Studded Body along with some Studded Chaps",
+    "requirements": "20 Ranged,  20 Defence",
+    "pts": "10"
+  },
+  "39": {
+    "id": "430",
+    "region": "General",
+    "name": "Equip an Elemental Staff",
+    "task": "Equip a basic elemental staff",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "40": {
+    "id": "311",
+    "region": "General",
+    "name": "Fletch an Oak Shortbow",
+    "task": "Fletch an Oak Shortbow",
+    "requirements": "20 Fletching 15 Woodcutting if chopping own log",
+    "pts": "10"
+  },
+  "41": {
+    "id": "310",
+    "region": "General",
+    "name": "Fletch Some Arrow Shafts",
+    "task": "Fletch some Arrow Shafts",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "42": {
+    "id": "1276",
+    "region": "General",
+    "name": "Kill a Necromancer",
+    "task": "Kill a Necromancer",
+    "requirements": "Either  Kandarin\u2713 (Necromancer) or  Kourend\u2713 (Necromancer (Great Kourend))",
+    "pts": "10"
+  },
+  "43": {
+    "id": "373",
+    "region": "General",
+    "name": "Light a Torch",
+    "task": "Light a Torch",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "44": {
+    "id": "366",
+    "region": "General",
+    "name": "Locate a Runecrafting Altar With a Talisman",
+    "task": "Use any talisman to check the location of a Runecrafting Altar",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "45": {
+    "id": "392",
+    "region": "General",
+    "name": "Make an Attack Potion",
+    "task": "Make an Attack Potion",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "46": {
+    "id": "1371",
+    "region": "General",
+    "name": "Mine 5 Tin Ore",
+    "task": "Mine 5 Tin Ore",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "47": {
+    "id": "303",
+    "region": "General",
+    "name": "Mine some Copper Ore",
+    "task": "Mine some Copper Ore",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "48": {
+    "id": "1801",
+    "region": "General",
+    "name": "Mine some essence",
+    "task": "Mine some essence",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "49": {
+    "id": "304",
+    "region": "General",
+    "name": "Mine some Ore With a Steel Pickaxe",
+    "task": "Mine any ore using a Steel Pickaxe",
+    "requirements": "6 Mining",
+    "pts": "10"
+  },
+  "50": {
+    "id": "291",
+    "region": "General",
+    "name": "Obtain a Bird Nest",
+    "task": "Obtain a Bird Nest whilst cutting down trees",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "51": {
+    "id": "1070",
+    "region": "General",
+    "name": "Obtain a Casket from Fishing",
+    "task": "Obtain a Casket from Fishing",
+    "requirements": "16 Fishing",
+    "pts": "10"
+  },
+  "52": {
+    "id": "189",
+    "region": "General",
+    "name": "Open the Leagues Menu",
+    "task": "Open the Leagues Menu found within the Journal Panel",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "53": {
+    "id": "410",
+    "region": "General",
+    "name": "Perform a Special Attack",
+    "task": "Perform any special attack",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "54": {
+    "id": "273",
+    "region": "General",
+    "name": "Pickpocket a Citizen",
+    "task": "Pickpocket a Man or a Woman",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "55": {
+    "id": "281",
+    "region": "General",
+    "name": "Plant Seeds in an Allotment Patch",
+    "task": "Plant some seeds in an Allotment patch",
+    "requirements": "Seed dibber and one of  Asgarnia\u2713,  Morytania\u2713,  Kandarin\u2713,  Kourend\u2713,  Tirannwn\u2713, or  Varlamore\u2713",
+    "pts": "10"
+  },
+  "56": {
+    "id": "282",
+    "region": "General",
+    "name": "Protect Your Crops",
+    "task": "Pay a farmer to protect any of your crops",
+    "requirements": "Items requested by the farmer to protect the crop",
+    "pts": "10"
+  },
+  "57": {
+    "id": "356",
+    "region": "General",
+    "name": "Purchase a Player Owned House",
+    "task": "Purchase a Player Owned House",
+    "requirements": "1,000 or completion of   Daddy's Home",
+    "pts": "10"
+  },
+  "58": {
+    "id": "280",
+    "region": "General",
+    "name": "Rake a Farming Patch",
+    "task": "Rake any Farming patch",
+    "requirements": "Rake",
+    "pts": "10"
+  },
+  "59": {
+    "id": "401",
+    "region": "General",
+    "name": "Reach Combat Level 10",
+    "task": "Reach Combat Level 10",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "60": {
+    "id": "402",
+    "region": "General",
+    "name": "Reach Combat Level 25",
+    "task": "Reach Combat Level 25",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "61": {
+    "id": "94",
+    "region": "General",
+    "name": "Restore 5 Prayer Points at an Altar",
+    "task": "Restore 5 or more Prayer Points at any altar",
+    "requirements": "5 Prayer",
+    "pts": "10"
+  },
+  "62": {
+    "id": "1783",
+    "region": "General",
+    "name": "Scatter some Ashes",
+    "task": "Scatter some Ashes",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "63": {
+    "id": "347",
+    "region": "General",
+    "name": "Smelt a Bronze Bar",
+    "task": "Use a Furnace to smelt a Bronze Bar",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "64": {
+    "id": "348",
+    "region": "General",
+    "name": "Smelt an Iron Bar",
+    "task": "Use a Furnace to smelt an Iron Bar",
+    "requirements": "15 Smithing",
+    "pts": "10"
+  },
+  "65": {
+    "id": "1373",
+    "region": "General",
+    "name": "Smith a Bronze full helm",
+    "task": "Use an Anvil to smith a Bronze full helm",
+    "requirements": "7 Smithing",
+    "pts": "10"
+  },
+  "66": {
+    "id": "1374",
+    "region": "General",
+    "name": "Smith a Bronze plateskirt",
+    "task": "Use an Anvil to smith a Bronze plateskirt",
+    "requirements": "16 Smithing",
+    "pts": "10"
+  },
+  "67": {
+    "id": "380",
+    "region": "General",
+    "name": "Snare a Bird",
+    "task": "Catch any bird with a Bird Snare",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "68": {
+    "id": "331",
+    "region": "General",
+    "name": "Spin a Ball of Wool",
+    "task": "Use a Spinning Wheel to spin a Ball of Wool",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "69": {
+    "id": "275",
+    "region": "General",
+    "name": "Steal a Chocolate Slice",
+    "task": "Steal a Chocolate Slice from a Bakery Stall",
+    "requirements": "5 Thieving Fremennik\u2713,  Kandarin\u2713,  Kourend\u2713, or  Varlamore\u2713",
+    "pts": "10"
+  },
+  "70": {
+    "id": "1071",
+    "region": "General",
+    "name": "Steal Some Silk",
+    "task": "Steal some silk from a silk stall",
+    "requirements": "20 Thieving Kandarin\u2713,  Kourend\u2713,  Tirannwn\u2713, or  Varlamore\u2713",
+    "pts": "10"
+  },
+  "71": {
+    "id": "1350",
+    "region": "General",
+    "name": "Successfully Cut a Red Topaz",
+    "task": "Successfully Cut a Red Topaz",
+    "requirements": "16 CraftingChisel",
+    "pts": "10"
+  },
+  "72": {
+    "id": "95",
+    "region": "General",
+    "name": "Superhuman Strength and Improved Reflexes",
+    "task": "Use both the Superhuman Strength prayer and the Improved Reflexes prayer at the same time",
+    "requirements": "16 Prayer",
+    "pts": "10"
+  },
+  "73": {
+    "id": "358",
+    "region": "General",
+    "name": "Turn any Logs Into a Plank",
+    "task": "Use a Sawmill to turn Logs into a Plank",
+    "requirements": "Logs and 100",
+    "pts": "10"
+  },
+  "74": {
+    "id": "1540",
+    "region": "General",
+    "name": "Use a Hat Stand",
+    "task": "Put a hat on a hat stand, or try at least",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "75": {
+    "id": "409",
+    "region": "General",
+    "name": "Visit Death's Domain",
+    "task": "Visit Death's Domain",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "76": {
+    "id": "364",
+    "region": "General",
+    "name": "Visit the Rune Essence Mine",
+    "task": "Visit the Rune Essence Mine",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "77": {
+    "id": "644",
+    "region": "Karamja",
+    "name": "Catch a Karambwanji",
+    "task": "Catch a Karambwanji on Karamja",
+    "requirements": "5 Fishing",
+    "pts": "10"
+  },
+  "78": {
+    "id": "675",
+    "region": "Karamja",
+    "name": "Fill a Crate With Bananas",
+    "task": "Fill a crate with Bananas for Luthas at Musa Point",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "79": {
+    "id": "1798",
+    "region": "Karamja",
+    "name": "Kill a Snake in Karamja",
+    "task": "Kill a Snake in Karamja",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "80": {
+    "id": "679",
+    "region": "Karamja",
+    "name": "Pick a Pineapple on Karamja",
+    "task": "Pick a Pineapple on Karamja",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "81": {
+    "id": "638",
+    "region": "Karamja",
+    "name": "Receive an Agility Arena Ticket",
+    "task": "Receive an Agility Arena Ticket from the Brimhaven Agility Arena",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "82": {
+    "id": "1557",
+    "region": "Misthalin",
+    "name": "Ask for a Quest from Bob",
+    "task": "Talk to Bob in Lumbridge axe shop and ask for a Quest",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "83": {
+    "id": "1315",
+    "region": "Misthalin",
+    "name": "Chop a log from a potato tree",
+    "task": "Chop a log from a tree that is curiously in a potato field",
+    "requirements": "Normal tree or Oak tree",
+    "pts": "10"
+  },
+  "84": {
+    "id": "459",
+    "region": "Misthalin",
+    "name": "Complete the Draynor Agility Course",
+    "task": "Complete a lap of the Draynor Rooftop Agility Course",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "85": {
+    "id": "512",
+    "region": "Misthalin",
+    "name": "Complete the Natural History Quiz",
+    "task": "Complete the Natural History Quiz in the Varrock Museum",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "86": {
+    "id": "1522",
+    "region": "Misthalin",
+    "name": "Complete the Varrock Agility Course",
+    "task": "Complete a lap of the Varrock Rooftop Agility Course",
+    "requirements": "30 Agility",
+    "pts": "10"
+  },
+  "87": {
+    "id": "466",
+    "region": "Misthalin",
+    "name": "Defeat the Lesser Demon in the Wizards' Tower",
+    "task": "Defeat the Lesser Demon at the top of the Wizards' Tower",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "88": {
+    "id": "1780",
+    "region": "Misthalin",
+    "name": "Drink a beer in the Longhall",
+    "task": "Drink a beer in the Longhall in Barbarian Village",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "89": {
+    "id": "1562",
+    "region": "Misthalin",
+    "name": "Eat an Onion",
+    "task": "Eat an Onion, raw",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "90": {
+    "id": "494",
+    "region": "Misthalin",
+    "name": "Enter Zanaris",
+    "task": "Enter the lost city of Zanaris",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "91": {
+    "id": "1560",
+    "region": "Misthalin",
+    "name": "Equip an Iron dagger",
+    "task": "Equip an Iron dagger",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "92": {
+    "id": "1313",
+    "region": "Misthalin",
+    "name": "Get a chair to follow you",
+    "task": "Get a chair to follow you",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "93": {
+    "id": "1776",
+    "region": "Misthalin",
+    "name": "Get a haircut",
+    "task": "Go and get a haircut",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "94": {
+    "id": "1314",
+    "region": "Misthalin",
+    "name": "Get your revenge against a Dark Wizard",
+    "task": "Get your revenge against a Dark Wizard, south of Varrock",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "95": {
+    "id": "1321",
+    "region": "Misthalin",
+    "name": "Have Elsie tell you a story",
+    "task": "Have Elsie tell you a story in Varrock",
+    "requirements": "A cup of tea",
+    "pts": "10"
+  },
+  "96": {
+    "id": "1311",
+    "region": "Misthalin",
+    "name": "Have Ned make you some rope",
+    "task": "Have Ned make you some rope using a ball of wool in Draynor Village",
+    "requirements": "4 balls of wool",
+    "pts": "10"
+  },
+  "97": {
+    "id": "1308",
+    "region": "Misthalin",
+    "name": "Insult Aggie the Witch",
+    "task": "Insult Aggie the Witch in Draynor Village",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "98": {
+    "id": "1781",
+    "region": "Misthalin",
+    "name": "Kill a Barbarian in the Barbarian Village",
+    "task": "Kill a Barbarian in Barbarian Village",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "99": {
+    "id": "1559",
+    "region": "Misthalin",
+    "name": "Kill a Chicken with your fists",
+    "task": "Kill a Chicken with your fists",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "100": {
+    "id": "1553",
+    "region": "Misthalin",
+    "name": "Kill a Cow in one hit",
+    "task": "Kill a Cow in one hit",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "101": {
+    "id": "1563",
+    "region": "Misthalin",
+    "name": "Kill a Duck with a fire spell",
+    "task": "Kill a Duck with a fire spell",
+    "requirements": "13 Magic",
+    "pts": "10"
+  },
+  "102": {
+    "id": "1565",
+    "region": "Misthalin",
+    "name": "Kill a Frog",
+    "task": "Kill a Frog",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "103": {
+    "id": "1566",
+    "region": "Misthalin",
+    "name": "Kill a Goblin holding a spear",
+    "task": "Kill a Goblin holding a spear",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "104": {
+    "id": "1555",
+    "region": "Misthalin",
+    "name": "Kill a Mugger",
+    "task": "Kill a Mugger",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "105": {
+    "id": "1558",
+    "region": "Misthalin",
+    "name": "Kill a Ram",
+    "task": "Kill a Ram",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "106": {
+    "id": "1554",
+    "region": "Misthalin",
+    "name": "Kill a Rat",
+    "task": "Kill a Rat",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "107": {
+    "id": "1552",
+    "region": "Misthalin",
+    "name": "Kill a Spider by kicking it",
+    "task": "Kill a Spider in Lumbridge by kicking it",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "108": {
+    "id": "1564",
+    "region": "Misthalin",
+    "name": "Kill an Imp with an earth spell",
+    "task": "Kill an Imp with an earth spell",
+    "requirements": "9 Magic",
+    "pts": "10"
+  },
+  "109": {
+    "id": "1306",
+    "region": "Misthalin",
+    "name": "Milk a cow",
+    "task": "Milk a cow in Lumbridge",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "110": {
+    "id": "1327",
+    "region": "Misthalin",
+    "name": "Pan for an Uncut Jade",
+    "task": "Pan for an Uncut Jade",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "111": {
+    "id": "498",
+    "region": "Misthalin",
+    "name": "Pet a Stray Dog in Varrock",
+    "task": "Pet a Stray Dog in Varrock",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "112": {
+    "id": "1143",
+    "region": "Misthalin",
+    "name": "Pet the Museum Camp dog",
+    "task": "Pet the dog in the Museum Camp on Fossil Island",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "113": {
+    "id": "1771",
+    "region": "Misthalin",
+    "name": "Pick a Cabbage in Varrock",
+    "task": "Pick a Cabbage in Varrock",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "114": {
+    "id": "1561",
+    "region": "Misthalin",
+    "name": "Pray at an Altar in Lumbridge",
+    "task": "Pray at an Altar in Lumbridge",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "115": {
+    "id": "1332",
+    "region": "Misthalin",
+    "name": "Slash a web in varrock sewers",
+    "task": "Slash a web in Varrock sewers",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "116": {
+    "id": "457",
+    "region": "Misthalin",
+    "name": "Steal From the Varrock Tea Stall",
+    "task": "Steal from the Tea Stall in Varrock",
+    "requirements": "5 Thieving",
+    "pts": "10"
+  },
+  "117": {
+    "id": "1775",
+    "region": "Misthalin",
+    "name": "Stroke your cat",
+    "task": "Get a cat and stroke it!",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "118": {
+    "id": "1799",
+    "region": "Misthalin",
+    "name": "Take a Canoe to Champions Guild",
+    "task": "Take a Canoe from Lumbridge to the Champions Guild",
+    "requirements": "12 Woodcutting",
+    "pts": "10"
+  },
+  "119": {
+    "id": "1556",
+    "region": "Misthalin",
+    "name": "Talk to Hans",
+    "task": "Talk to Hans and have him tell you how old you are",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "120": {
+    "id": "496",
+    "region": "Misthalin",
+    "name": "Travel to Fossil Island",
+    "task": "Take the Museum Barge to Fossil Island",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "121": {
+    "id": "1547",
+    "region": "Misthalin",
+    "name": "Upset the homeless",
+    "task": "Anger the Tramp, in south east Varrock",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "122": {
+    "id": "508",
+    "region": "Misthalin",
+    "name": "Use a Fairy Ring",
+    "task": "Use any Fairy Ring",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "123": {
+    "id": "1774",
+    "region": "Misthalin",
+    "name": "Use the Northern Staircase in Lumbridge",
+    "task": "Use the Northern Staircase in Lumbridge Castle to go upstairs from the bottom floor",
+    "requirements": "N/A",
+    "pts": "10"
+  },
+  "124": {
+    "id": "148",
+    "region": "General",
+    "name": "1 Easy Clue Scroll",
+    "task": "Open a Reward casket for completing an easy clue scroll",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "125": {
+    "id": "160",
+    "region": "General",
+    "name": "1 Elite Clue Scroll",
+    "task": "Open a Reward casket for completing an elite clue scroll",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "126": {
+    "id": "156",
+    "region": "General",
+    "name": "1 Hard Clue Scroll",
+    "task": "Open a Reward casket for completing a hard clue scroll",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "127": {
+    "id": "152",
+    "region": "General",
+    "name": "1 Medium Clue Scroll",
+    "task": "Open a Reward casket for completing a medium clue scroll",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "128": {
+    "id": "1449",
+    "region": "General",
+    "name": "15 Collection log slots",
+    "task": "Obtain 15 unique Collection Log slots",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "129": {
+    "id": "149",
+    "region": "General",
+    "name": "25 Easy Clue Scrolls",
+    "task": "Open 25 Reward caskets for completing easy clue scrolls",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "130": {
+    "id": "161",
+    "region": "General",
+    "name": "25 Elite Clue Scrolls",
+    "task": "Open 25 Reward caskets for completing elite clue scrolls",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "131": {
+    "id": "157",
+    "region": "General",
+    "name": "25 Hard Clue Scrolls",
+    "task": "Open 25 Reward caskets for completing hard clue scrolls",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "132": {
+    "id": "153",
+    "region": "General",
+    "name": "25 Medium Clue Scrolls",
+    "task": "Open 25 Reward caskets for completing medium clue scrolls",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "133": {
+    "id": "96",
+    "region": "General",
+    "name": "25 Superior Slayer Encounters",
+    "task": "Defeat 25 superior foes while on a Slayer Task",
+    "requirements": "5 SlayerUnlocked Bigger and Badder for 150 Slayer reward points",
+    "pts": "30"
+  },
+  "134": {
+    "id": "1450",
+    "region": "General",
+    "name": "30 Collection log slots",
+    "task": "Obtain 30 unique Collection Log slots",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "135": {
+    "id": "1448",
+    "region": "General",
+    "name": "5 Collection log slots",
+    "task": "Obtain 5 unique Collection Log slots",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "136": {
+    "id": "1451",
+    "region": "General",
+    "name": "50 Collection log slots",
+    "task": "Obtain 50 unique Collection Log slots",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "137": {
+    "id": "150",
+    "region": "General",
+    "name": "75 Easy Clue Scrolls",
+    "task": "Open 75 Reward caskets for completing easy clue scrolls",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "138": {
+    "id": "154",
+    "region": "General",
+    "name": "75 Medium Clue Scrolls",
+    "task": "Open 75 Reward caskets for completing medium clue scrolls",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "139": {
+    "id": "98",
+    "region": "General",
+    "name": "75 Superior Slayer Encounters",
+    "task": "Defeat 75 superior foes while on a Slayer Task",
+    "requirements": "5 SlayerUnlocked Bigger and Badder for 150 Slayer reward points",
+    "pts": "30"
+  },
+  "140": {
+    "id": "195",
+    "region": "General",
+    "name": "Achieve Your First Level 30",
+    "task": "Reach level 30 in any skill",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "141": {
+    "id": "196",
+    "region": "General",
+    "name": "Achieve Your First Level 40",
+    "task": "Reach level 40 in any skill",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "142": {
+    "id": "197",
+    "region": "General",
+    "name": "Achieve Your First Level 50",
+    "task": "Reach level 50 in any skill",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "143": {
+    "id": "198",
+    "region": "General",
+    "name": "Achieve Your First Level 60",
+    "task": "Reach level 60 in any skill",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "144": {
+    "id": "359",
+    "region": "General",
+    "name": "Build a Mahogany Portal",
+    "task": "Build a Mahogany Portal in a Portal Chamber in your Player Owned House",
+    "requirements": "65 Construction",
+    "pts": "30"
+  },
+  "145": {
+    "id": "357",
+    "region": "General",
+    "name": "Build a Room in Your Player Owned House",
+    "task": "Build a room in your Player Owned House",
+    "requirements": "1,000",
+    "pts": "30"
+  },
+  "146": {
+    "id": "294",
+    "region": "General",
+    "name": "Build a Waka Canoe",
+    "task": "Build a Waka Canoe",
+    "requirements": "57 Woodcutting",
+    "pts": "30"
+  },
+  "147": {
+    "id": "360",
+    "region": "General",
+    "name": "Build an Oak Larder",
+    "task": "Build an Oak Larder in a Kitchen in your Player Owned House",
+    "requirements": "33 Construction",
+    "pts": "30"
+  },
+  "148": {
+    "id": "374",
+    "region": "General",
+    "name": "Burn 100 Willow Logs",
+    "task": "Burn 100 Willow Logs",
+    "requirements": "30 Firemaking",
+    "pts": "30"
+  },
+  "149": {
+    "id": "1821",
+    "region": "General",
+    "name": "Burn 25 Maple Logs",
+    "task": "Burn 25 Maple Logs",
+    "requirements": "45 Firemaking",
+    "pts": "30"
+  },
+  "150": {
+    "id": "11",
+    "region": "General",
+    "name": "Burn Some Coloured Logs",
+    "task": "Burn some logs that have been coloured with a firelighter",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "151": {
+    "id": "188",
+    "region": "General",
+    "name": "Bury Some Wyvern or Dragon Bones",
+    "task": "Bury either some Wyvern Bones or some Dragon Bones",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "152": {
+    "id": "1567",
+    "region": "General",
+    "name": "Buy a candle in Lumbridge",
+    "task": "Buy a candle in Lumbridge",
+    "requirements": "1,000",
+    "pts": "30"
+  },
+  "153": {
+    "id": "434",
+    "region": "General",
+    "name": "Cast a Blast Spell",
+    "task": "Cast any blast spell",
+    "requirements": "41 Magic",
+    "pts": "30"
+  },
+  "154": {
+    "id": "435",
+    "region": "General",
+    "name": "Cast High Level Alchemy",
+    "task": "Cast the High Level Alchemy spell",
+    "requirements": "55 Magic",
+    "pts": "30"
+  },
+  "155": {
+    "id": "1827",
+    "region": "General",
+    "name": "Catch 10 Pike",
+    "task": "Catch 10 Pike",
+    "requirements": "25 Fishing",
+    "pts": "30"
+  },
+  "156": {
+    "id": "343",
+    "region": "General",
+    "name": "Catch 100 Lobsters",
+    "task": "Catch 100 Raw Lobsters whilst Fishing",
+    "requirements": "40 Fishing",
+    "pts": "30"
+  },
+  "157": {
+    "id": "1825",
+    "region": "General",
+    "name": "Catch 25 Sardines",
+    "task": "Catch 25 Sardines",
+    "requirements": "5 Fishing",
+    "pts": "30"
+  },
+  "158": {
+    "id": "345",
+    "region": "General",
+    "name": "Catch 50 Salmon",
+    "task": "Catch 50 Raw Salmon whilst Fishing",
+    "requirements": "30 Fishing",
+    "pts": "30"
+  },
+  "159": {
+    "id": "344",
+    "region": "General",
+    "name": "Catch 50 Swordfish",
+    "task": "Catch 50 Raw Swordfish whilst Fishing",
+    "requirements": "50 Fishing",
+    "pts": "30"
+  },
+  "160": {
+    "id": "1614",
+    "region": "General",
+    "name": "Catch a Grey Chinchompa",
+    "task": "Catch a Grey Chinchompa",
+    "requirements": "53 Hunter",
+    "pts": "30"
+  },
+  "161": {
+    "id": "382",
+    "region": "General",
+    "name": "Catch a Swamp Lizard or Salamander",
+    "task": "Catch either a Swamp Lizard or any kind of Salamander",
+    "requirements": "Either  29 Hunter ( Morytania\u2713),  47 Hunter ( Desert\u2713),  59 Hunter ( Kandarin\u2713,  67 Hunter ( Wilderness\u2713),  79 Hunter ( Varlamore\u2713)",
+    "pts": "30"
+  },
+  "162": {
+    "id": "285",
+    "region": "General",
+    "name": "Check a grown Fruit Tree",
+    "task": "Check the health of any Fruit Tree you've grown",
+    "requirements": "27 Farming",
+    "pts": "30"
+  },
+  "163": {
+    "id": "292",
+    "region": "General",
+    "name": "Chop 100 Willow Logs",
+    "task": "Chop 100 Willow Logs from Willow Trees",
+    "requirements": "30 Woodcutting",
+    "pts": "30"
+  },
+  "164": {
+    "id": "293",
+    "region": "General",
+    "name": "Chop Some Logs With a Rune Axe",
+    "task": "Chop any kind of logs using a Rune Axe",
+    "requirements": "41 Woodcutting",
+    "pts": "30"
+  },
+  "165": {
+    "id": "1217",
+    "region": "General",
+    "name": "Chop some Rising Roots",
+    "task": "Chop some Rising Roots spawned via Forestry",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "166": {
+    "id": "1788",
+    "region": "General",
+    "name": "Clean 50 Grimy Cadantine",
+    "task": "Clean 50 Grimy Cadantine",
+    "requirements": "65 Herblore",
+    "pts": "30"
+  },
+  "167": {
+    "id": "1786",
+    "region": "General",
+    "name": "Clean 50 Grimy Ranarr Weed",
+    "task": "Clean 50 Grimy Ranarr Weed",
+    "requirements": "25 Herblore",
+    "pts": "30"
+  },
+  "168": {
+    "id": "395",
+    "region": "General",
+    "name": "Clean a Grimy Avantoe",
+    "task": "Clean a Grimy Avantoe",
+    "requirements": "48 Herblore",
+    "pts": "30"
+  },
+  "169": {
+    "id": "1524",
+    "region": "General",
+    "name": "Complete 1 Slayer Task",
+    "task": "Complete 1 Slayer Task",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "170": {
+    "id": "1207",
+    "region": "General",
+    "name": "Complete 10 Mahogany homes contracts",
+    "task": "Complete 10 Mahogany homes contracts",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "171": {
+    "id": "1208",
+    "region": "General",
+    "name": "Complete 25 Mahogany homes contracts",
+    "task": "Complete 25 Mahogany homes contracts",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "172": {
+    "id": "389",
+    "region": "General",
+    "name": "Complete 50 Laps of a Rooftop Agility Course",
+    "task": "Complete 50 laps of any Rooftop Agility Course",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "173": {
+    "id": "1205",
+    "region": "General",
+    "name": "Complete a Mahogany homes adept contract",
+    "task": "Complete a   Mahogany Homes adept contract",
+    "requirements": "50 Construction",
+    "pts": "30"
+  },
+  "174": {
+    "id": "1203",
+    "region": "General",
+    "name": "Complete a Mahogany homes beginner contract",
+    "task": "Complete a   Mahogany Homes beginner contract",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "175": {
+    "id": "1204",
+    "region": "General",
+    "name": "Complete a Mahogany homes novice contract",
+    "task": "Complete a   Mahogany Homes novice contract",
+    "requirements": "20 Construction",
+    "pts": "30"
+  },
+  "176": {
+    "id": "763",
+    "region": "General",
+    "name": "Complete the Easy Western Provinces Diary",
+    "task": "Complete all of the easy tasks in the   Western Provinces Achievement Diary",
+    "requirements": "See   Western Provinces Diary#Easy",
+    "pts": "30"
+  },
+  "177": {
+    "id": "1621",
+    "region": "General",
+    "name": "Complete the Evil Bob random event",
+    "task": "Complete the Evil Bob random event",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "178": {
+    "id": "1219",
+    "region": "General",
+    "name": "Complete the Flowering Bush event",
+    "task": "Complete the Flowering Bush event spawned via Forestry",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "179": {
+    "id": "1625",
+    "region": "General",
+    "name": "Complete the Maze random event",
+    "task": "Complete the Maze random event",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "180": {
+    "id": "764",
+    "region": "General",
+    "name": "Complete the Medium Western Provinces Diary",
+    "task": "Complete all of the medium tasks in the   Western Provinces Achievement Diary",
+    "requirements": "See   Western Provinces Diary#Medium",
+    "pts": "30"
+  },
+  "181": {
+    "id": "1519",
+    "region": "General",
+    "name": "Complete the Pheasant Forestry Event",
+    "task": "Complete the Pheasant event spawned via Forestry",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "182": {
+    "id": "1628",
+    "region": "General",
+    "name": "Complete the Pillory random event",
+    "task": "Complete the Pillory random event",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "183": {
+    "id": "1627",
+    "region": "General",
+    "name": "Complete the Pinball random event",
+    "task": "Complete the Pinball random event",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "184": {
+    "id": "1622",
+    "region": "General",
+    "name": "Complete the Postie Pete random event",
+    "task": "Complete the Postie Pete random event",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "185": {
+    "id": "1629",
+    "region": "General",
+    "name": "Complete the Prison Pete random event",
+    "task": "Complete the Prison Pete random event",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "186": {
+    "id": "1518",
+    "region": "General",
+    "name": "Complete the Ritual Forestry Event",
+    "task": "Complete the Ritual event spawned via Forestry",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "187": {
+    "id": "1218",
+    "region": "General",
+    "name": "Complete the Struggling Sapling event",
+    "task": "Complete the Struggling Sapling event spawned via Forestry",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "188": {
+    "id": "1631",
+    "region": "General",
+    "name": "Complete the Surprise Exam random event",
+    "task": "Complete the Surprise Exam random event",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "189": {
+    "id": "1826",
+    "region": "General",
+    "name": "Cook 10 Sardines",
+    "task": "Cook 10 Raw Sardines",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "190": {
+    "id": "300",
+    "region": "General",
+    "name": "Cook 100 Lobsters",
+    "task": "Cook 100 Raw Lobsters",
+    "requirements": "40 Cooking",
+    "pts": "30"
+  },
+  "191": {
+    "id": "1828",
+    "region": "General",
+    "name": "Cook 20 Pike",
+    "task": "Cook 20 Raw Pike",
+    "requirements": "20 Cooking",
+    "pts": "30"
+  },
+  "192": {
+    "id": "367",
+    "region": "General",
+    "name": "Craft 200 Essence Into Runes",
+    "task": "Use Runecrafting Altars to craft 200 essence into runes of any type",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "193": {
+    "id": "368",
+    "region": "General",
+    "name": "Craft 4 Runes With 1 Essence",
+    "task": "Use a Runecrafting Altar to craft 4 of any type of rune using a single essence",
+    "requirements": "57 Runecraft (or  33 Runecraft with  Asgarnia\u2713)",
+    "pts": "30"
+  },
+  "194": {
+    "id": "336",
+    "region": "General",
+    "name": "Craft a Ruby Amulet",
+    "task": "Craft a Ruby Amulet",
+    "requirements": "50 Crafting",
+    "pts": "30"
+  },
+  "195": {
+    "id": "335",
+    "region": "General",
+    "name": "Craft an Emerald Ring",
+    "task": "Craft an Emerald Ring",
+    "requirements": "27 Crafting",
+    "pts": "30"
+  },
+  "196": {
+    "id": "369",
+    "region": "General",
+    "name": "Craft Any Combination Rune",
+    "task": "Use a Runecrafting Altar to craft any type of combination rune",
+    "requirements": "6 Runecraft",
+    "pts": "30"
+  },
+  "197": {
+    "id": "1351",
+    "region": "General",
+    "name": "Create a green d'hide shield",
+    "task": "Create a green d'hide shield",
+    "requirements": "62 Crafting",
+    "pts": "30"
+  },
+  "198": {
+    "id": "1368",
+    "region": "General",
+    "name": "Create a Guthix Rest Tea",
+    "task": "Create a Guthix Rest Tea",
+    "requirements": "18 HerblorePartial completion of   One Small Favour, requiring one of  Asgarnia\u2713,  Desert\u2713,  Fremennik\u2713, or  Kandarin\u2713",
+    "pts": "30"
+  },
+  "199": {
+    "id": "1820",
+    "region": "General",
+    "name": "Cut 50 Maple Logs",
+    "task": "Cut 50 Maple Logs",
+    "requirements": "45 Woodcutting",
+    "pts": "30"
+  },
+  "200": {
+    "id": "62",
+    "region": "General",
+    "name": "Defeat a Lesser Demon",
+    "task": "Defeat a Lesser Demon",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "201": {
+    "id": "322",
+    "region": "General",
+    "name": "Defeat a Superior Slayer Creature",
+    "task": "Defeat any Superior Slayer Creature",
+    "requirements": "5 SlayerUnlocked Bigger and Badder for 150 Slayer reward points",
+    "pts": "30"
+  },
+  "202": {
+    "id": "15",
+    "region": "General",
+    "name": "Eat some Purple Sweets",
+    "task": "Eat some Purple Sweets",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "203": {
+    "id": "1335",
+    "region": "General",
+    "name": "Equip a frog mask",
+    "task": "Equip a frog mask",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "204": {
+    "id": "418",
+    "region": "General",
+    "name": "Equip a Full Adamant Set",
+    "task": "Equip an Adamant Platebody, a Adamant Full Helm and either some Adamant Platelegs or an Adamant Plateskirt",
+    "requirements": "30 Defence",
+    "pts": "30"
+  },
+  "205": {
+    "id": "423",
+    "region": "General",
+    "name": "Equip a Full Blue Dragonhide Set",
+    "task": "Equip a Blue Dragonhide Body, some Blue Dragonhide Chaps and some Blue Dragonhide Vambraces",
+    "requirements": "50 Ranged,  40 Defence",
+    "pts": "30"
+  },
+  "206": {
+    "id": "422",
+    "region": "General",
+    "name": "Equip a Full Green Dragonhide Set",
+    "task": "Equip a Green Dragonhide Body, some Green Dragonhide Chaps and some Green Dragonhide Vambraces",
+    "requirements": "40 Ranged,  40 Defence",
+    "pts": "30"
+  },
+  "207": {
+    "id": "417",
+    "region": "General",
+    "name": "Equip a Full Mithril Set",
+    "task": "Equip a Mithril Platebody, a Mithril Full Helm and either some Mithril Platelegs or a Mithril Plateskirt",
+    "requirements": "20 Defence",
+    "pts": "30"
+  },
+  "208": {
+    "id": "424",
+    "region": "General",
+    "name": "Equip a Full Red Dragonhide Set",
+    "task": "Equip a Red Dragonhide Body, some Red Dragonhide Chaps and some Red Dragonhide Vambraces",
+    "requirements": "60 Ranged,  40 Defence",
+    "pts": "30"
+  },
+  "209": {
+    "id": "593",
+    "region": "General",
+    "name": "Equip a Granite Shield",
+    "task": "Equip a Granite Shield",
+    "requirements": "50 Defence,  50 StrengthRequires  Kandarin\u2713,  Asgarnia\u2713, or  Fremennik\u2713",
+    "pts": "30"
+  },
+  "210": {
+    "id": "1012",
+    "region": "General",
+    "name": "Equip a Lava Battlestaff",
+    "task": "Equip a Lava Battlestaff",
+    "requirements": "30 Attack,  30 Magic Kandarin\u2713,  Asgarnia\u2713,  Wilderness\u2713,  Morytania\u2713,  Kourend\u2713, or  Desert\u2713.",
+    "pts": "30"
+  },
+  "211": {
+    "id": "616",
+    "region": "General",
+    "name": "Equip a Leaf-Bladed Sword",
+    "task": "Equip a Leaf-Bladed Sword",
+    "requirements": "50 Attack,  55 SlayerRequires  Fremennik\u2713 or  Tirannwn\u2713",
+    "pts": "30"
+  },
+  "212": {
+    "id": "426",
+    "region": "General",
+    "name": "Equip a Maple Shortbow",
+    "task": "Equip a Maple Shortbow",
+    "requirements": "30 Ranged",
+    "pts": "30"
+  },
+  "213": {
+    "id": "412",
+    "region": "General",
+    "name": "Equip a Mithril Weapon",
+    "task": "Equip any Mithril weapon",
+    "requirements": "20 Attack",
+    "pts": "30"
+  },
+  "214": {
+    "id": "75",
+    "region": "General",
+    "name": "Equip a Piece of a Mystic Set",
+    "task": "Equip any piece of any Mystic robe set",
+    "requirements": "40 Magic,  20 Defence",
+    "pts": "30"
+  },
+  "215": {
+    "id": "1618",
+    "region": "General",
+    "name": "Equip a piece of Beekeeper's Outfit",
+    "task": "Equip a piece of Beekeeper's Outfit",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "216": {
+    "id": "1620",
+    "region": "General",
+    "name": "Equip a piece of Camouflage outfit",
+    "task": "Equip a piece of Camouflage outfit",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "217": {
+    "id": "1626",
+    "region": "General",
+    "name": "Equip a piece of Mime Outfit",
+    "task": "Equip a piece of Mime Outfit",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "218": {
+    "id": "1623",
+    "region": "General",
+    "name": "Equip a piece of Zombie Outfit",
+    "task": "Equip a piece of Zombie Outfit",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "219": {
+    "id": "414",
+    "region": "General",
+    "name": "Equip a Rune Weapon",
+    "task": "Equip any Rune weapon",
+    "requirements": "40 Attack",
+    "pts": "30"
+  },
+  "220": {
+    "id": "19",
+    "region": "General",
+    "name": "Equip a Trimmed Amulet",
+    "task": "Equip a Trimmed Amulet",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "221": {
+    "id": "1074",
+    "region": "General",
+    "name": "Equip a Willow Shield",
+    "task": "Equip a Willow Shield",
+    "requirements": "30 Defence,  42 Fletching2 Willow logs ( 30  if chopping yourself)",
+    "pts": "30"
+  },
+  "222": {
+    "id": "74",
+    "region": "General",
+    "name": "Equip a Wizard Robe and Hat",
+    "task": "Equip any wizard robe along with any wizard hat",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "223": {
+    "id": "427",
+    "region": "General",
+    "name": "Equip a Yew Shortbow",
+    "task": "Equip a Yew Shortbow",
+    "requirements": "40 Ranged",
+    "pts": "30"
+  },
+  "224": {
+    "id": "413",
+    "region": "General",
+    "name": "Equip an Adamant Weapon",
+    "task": "Equip any Adamant weapon",
+    "requirements": "30 Attack",
+    "pts": "30"
+  },
+  "225": {
+    "id": "433",
+    "region": "General",
+    "name": "Equip an Elemental Battlestaff or Mystic Staff",
+    "task": "Equip either an elemental battlestaff or an elemental mystic staff",
+    "requirements": "30 Magic,  30 Attack",
+    "pts": "30"
+  },
+  "226": {
+    "id": "381",
+    "region": "General",
+    "name": "Equip full Graahk, Larupia or Kyatt",
+    "task": "Equip a full set of Graahk, Larupia or Kyatt attire",
+    "requirements": "Either  38  ( Karamja\u2713),  28  ( Kandarin\u2713), or  52  ( Fremennik\u2713) to equip 41  to trap horned graahks ( Karamja\u2713), or  31  to trap spined larupia ( Kandarin\u2713)",
+    "pts": "30"
+  },
+  "227": {
+    "id": "1073",
+    "region": "General",
+    "name": "Equip some Black armour",
+    "task": "Equip either a Black Platebody, some Black Platelegs or a Black Full Helm",
+    "requirements": "10 Defence",
+    "pts": "30"
+  },
+  "228": {
+    "id": "1072",
+    "region": "General",
+    "name": "Equip some Steel armour",
+    "task": "Equip either a Steel Platebody, some Steel Platelegs or a Steel Full Helm",
+    "requirements": "5 Defence",
+    "pts": "30"
+  },
+  "229": {
+    "id": "29",
+    "region": "General",
+    "name": "Fill 15 Hard Clue Collection Log Slots",
+    "task": "Fill 15 slots in the Hard Clue section of the Collection Log",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "230": {
+    "id": "35",
+    "region": "General",
+    "name": "Fill 20 Easy Clue Collection Log Slots",
+    "task": "Fill 20 slots in the Easy Clue section of the Collection Log",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "231": {
+    "id": "34",
+    "region": "General",
+    "name": "Fill 20 Medium Clue Collection Log Slots",
+    "task": "Fill 20 slots in the Medium Clue section of the Collection Log",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "232": {
+    "id": "27",
+    "region": "General",
+    "name": "Fill 3 Elite Clue Collection Log Slots",
+    "task": "Fill 3 slots in the Elite Clue section of the Collection Log",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "233": {
+    "id": "32",
+    "region": "General",
+    "name": "Fill 3 Hard Clue Collection Log Slots",
+    "task": "Fill 3 slots in the Hard Clue section of the Collection Log",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "234": {
+    "id": "39",
+    "region": "General",
+    "name": "Fill 5 Beginner Clue Collection Log Slots",
+    "task": "Fill 5 slots in the Beginner Clue section of the Collection Log",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "235": {
+    "id": "38",
+    "region": "General",
+    "name": "Fill 5 Easy Clue Collection Log Slots",
+    "task": "Fill 5 slots in the Easy Clue section of the Collection Log",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "236": {
+    "id": "33",
+    "region": "General",
+    "name": "Fill 5 Medium Clue Collection Log Slots",
+    "task": "Fill 5 slots in the Medium Clue section of the Collection Log",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "237": {
+    "id": "284",
+    "region": "General",
+    "name": "Fill a Bucket With Supercompost",
+    "task": "Fill a Bucket with Supercompost from a Compost Bin",
+    "requirements": "Asgarnia\u2713,  Morytania\u2713,  Kandarin\u2713,  Kourend\u2713,  Tirannwn\u2713, or  Varlamore\u2713",
+    "pts": "30"
+  },
+  "238": {
+    "id": "983",
+    "region": "General",
+    "name": "Fill a Large Pouch",
+    "task": "Fill a Large Pouch with Essence",
+    "requirements": "50 Runecraft",
+    "pts": "30"
+  },
+  "239": {
+    "id": "361",
+    "region": "General",
+    "name": "Fill a Medium S.T.A.S.H. Unit",
+    "task": "Build a Medium S.T.A.S.H. unit and fill it with the relevant items",
+    "requirements": "42 Construction",
+    "pts": "30"
+  },
+  "240": {
+    "id": "1530",
+    "region": "General",
+    "name": "Find the Needle",
+    "task": "Dig in a hay stack for a needle",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "241": {
+    "id": "1358",
+    "region": "General",
+    "name": "Fletch 1000 arrow shafts",
+    "task": "Fletch 1000 arrow shafts",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "242": {
+    "id": "312",
+    "region": "General",
+    "name": "Fletch 150 Iron Arrows",
+    "task": "Fletch 150 Iron Arrows",
+    "requirements": "15 Fletching",
+    "pts": "30"
+  },
+  "243": {
+    "id": "1357",
+    "region": "General",
+    "name": "Fletch 25 Oak Stocks",
+    "task": "Fletch 25 Oak Stocks",
+    "requirements": "24 Fletching",
+    "pts": "30"
+  },
+  "244": {
+    "id": "313",
+    "region": "General",
+    "name": "Fletch a Willow Shortbow (u)",
+    "task": "Fletch a Willow Shortbow (u)",
+    "requirements": "35 Fletching",
+    "pts": "30"
+  },
+  "245": {
+    "id": "315",
+    "region": "General",
+    "name": "Fletch some Broad Arrows or Bolts",
+    "task": "Fletch either some Broad Arrows or some Broad Bolts",
+    "requirements": "52 FletchingUnlocked Broader Fletching using 300 Slayer reward points",
+    "pts": "30"
+  },
+  "246": {
+    "id": "54",
+    "region": "General",
+    "name": "Gain 10 Unique Items From Beginner Clues",
+    "task": "Gain 10 unique items from Beginner Clue Scroll Reward Caskets",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "247": {
+    "id": "52",
+    "region": "General",
+    "name": "Gain 10 Unique Items From Easy Clues",
+    "task": "Gain 10 unique items from Easy Clue Scroll Reward Caskets",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "248": {
+    "id": "50",
+    "region": "General",
+    "name": "Gain 10 Unique Items From Medium Clues",
+    "task": "Gain 10 unique items from Medium Clue Scroll Reward Caskets",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "249": {
+    "id": "45",
+    "region": "General",
+    "name": "Gain 20 Unique Items From Hard Clues",
+    "task": "Gain 20 unique items from Hard Clue Scroll Reward Caskets",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "250": {
+    "id": "49",
+    "region": "General",
+    "name": "Gain 35 Unique Items From Easy Clues",
+    "task": "Gain 35 unique items from Easy Clue Scroll Reward Caskets",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "251": {
+    "id": "48",
+    "region": "General",
+    "name": "Gain 5 Unique Items From Hard Clues",
+    "task": "Gain 5 unique items from Hard Clue Scroll Reward Caskets",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "252": {
+    "id": "59",
+    "region": "General",
+    "name": "Gain a Unique Item From a Beginner Clue",
+    "task": "Gain a unique item from a Beginner Clue Scroll Reward Casket",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "253": {
+    "id": "55",
+    "region": "General",
+    "name": "Gain a Unique Item From a Hard Clue",
+    "task": "Gain a unique item from a Hard Clue Scroll Reward Casket",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "254": {
+    "id": "53",
+    "region": "General",
+    "name": "Gain a Unique Item From a Master Clue",
+    "task": "Gain a unique item from a Master Clue Scroll Reward Casket",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "255": {
+    "id": "58",
+    "region": "General",
+    "name": "Gain a Unique Item From a Medium Clue",
+    "task": "Gain a unique item from a Medium Clue Scroll Reward Casket",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "256": {
+    "id": "57",
+    "region": "General",
+    "name": "Gain a Unique Item From an Easy Clue",
+    "task": "Gain a unique item from an Easy Clue Scroll Reward Casket",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "257": {
+    "id": "283",
+    "region": "General",
+    "name": "Harvest an Irit Leaf",
+    "task": "Harvest an Irit Leaf from any Herb patch",
+    "requirements": "44 Farming Asgarnia\u2713,  Morytania\u2713,  Kandarin\u2713,  Fremennik\u2713,  Kourend\u2713, or  Varlamore\u2713",
+    "pts": "30"
+  },
+  "258": {
+    "id": "1580",
+    "region": "General",
+    "name": "Kill 5 Bunnies",
+    "task": "Kill 5 Bunnies",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "259": {
+    "id": "1280",
+    "region": "General",
+    "name": "Kill three chickens in 6 seconds",
+    "task": "Kill three chickens in 6 seconds",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "260": {
+    "id": "1538",
+    "region": "General",
+    "name": "Land a hoop on a stick",
+    "task": "Successfully land a hoop on a stick in the PoH minigame",
+    "requirements": "30 Construction",
+    "pts": "30"
+  },
+  "261": {
+    "id": "376",
+    "region": "General",
+    "name": "Light a Bullseye Lantern",
+    "task": "Light a Bullseye Lantern",
+    "requirements": "49 FiremakingUnlit bullseye lantern",
+    "pts": "30"
+  },
+  "262": {
+    "id": "778",
+    "region": "General",
+    "name": "Make 20 Stamina Potions",
+    "task": "Make 20 Stamina Potions",
+    "requirements": "77 Herblore",
+    "pts": "30"
+  },
+  "263": {
+    "id": "394",
+    "region": "General",
+    "name": "Make 30 Prayer Potions",
+    "task": "Make 30 Prayer Potions",
+    "requirements": "38 Herblore",
+    "pts": "30"
+  },
+  "264": {
+    "id": "396",
+    "region": "General",
+    "name": "Make a 4 dose potion",
+    "task": "Make any 4 dose potion using an Amulet of Chemistry",
+    "requirements": "27 Magic,  34 CraftingAmulet mould to craft a Jade amulet (u) (requires either a 1/128 drop,  44 Construction, or an area unlock).",
+    "pts": "30"
+  },
+  "265": {
+    "id": "301",
+    "region": "General",
+    "name": "Make a Pineapple Pizza",
+    "task": "Make a Pineapple Pizza",
+    "requirements": "65 Cooking",
+    "pts": "30"
+  },
+  "266": {
+    "id": "1154",
+    "region": "General",
+    "name": "Make some Flour",
+    "task": "Make some Flour in a windmill",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "267": {
+    "id": "1372",
+    "region": "General",
+    "name": "Mine 15 coal",
+    "task": "Mine 15 coal",
+    "requirements": "30 Mining",
+    "pts": "30"
+  },
+  "268": {
+    "id": "306",
+    "region": "General",
+    "name": "Mine 50 Iron Ore",
+    "task": "Mine 50 Iron Ore",
+    "requirements": "15 Mining",
+    "pts": "30"
+  },
+  "269": {
+    "id": "1823",
+    "region": "General",
+    "name": "Mine 50 Mithril Ore",
+    "task": "Mine 50 Mithril Ore",
+    "requirements": "55 Mining",
+    "pts": "30"
+  },
+  "270": {
+    "id": "307",
+    "region": "General",
+    "name": "Mine some Ore With a Rune Pickaxe",
+    "task": "Mine any ore using a Rune Pickaxe",
+    "requirements": "41 Mining",
+    "pts": "30"
+  },
+  "271": {
+    "id": "277",
+    "region": "General",
+    "name": "Obtain 800 Coins From Coin Pouches At Once",
+    "task": "Open a stack of Coin Pouches and obtain at least 800 Coins",
+    "requirements": "40 Thieving (can be completed at lower levels depending on luck when pickpocketing NPCs with variable coin amounts)",
+    "pts": "30"
+  },
+  "272": {
+    "id": "308",
+    "region": "General",
+    "name": "Obtain a Clue Geode While Mining",
+    "task": "Obtain any kind of clue geode whilst Mining a rock",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "273": {
+    "id": "305",
+    "region": "General",
+    "name": "Obtain a Gem While Mining",
+    "task": "Obtain any kind of gem whilst Mining a rock",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "274": {
+    "id": "386",
+    "region": "General",
+    "name": "Obtain a Mark of Grace",
+    "task": "Obtain a Mark of Grace from any Rooftop Agility Course",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "275": {
+    "id": "274",
+    "region": "General",
+    "name": "Open 28 Coin Pouches At Once",
+    "task": "Open 28 Coin Pouches at once",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "276": {
+    "id": "1630",
+    "region": "General",
+    "name": "Open the Mystery Box",
+    "task": "A boat is a boat, but the mystery box could be anything, even a boat!",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "277": {
+    "id": "86",
+    "region": "General",
+    "name": "Pickpocket a Master Farmer",
+    "task": "Successfully pickpocket from a Master farmer",
+    "requirements": "38 Thieving",
+    "pts": "30"
+  },
+  "278": {
+    "id": "134",
+    "region": "General",
+    "name": "Reach a Prayer Bonus of 15",
+    "task": "Equip enough item to reach a Prayer bonus of 15 or more",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "279": {
+    "id": "216",
+    "region": "General",
+    "name": "Reach Base Level 10",
+    "task": "Reach level 10 in every skill",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "280": {
+    "id": "217",
+    "region": "General",
+    "name": "Reach Base Level 20",
+    "task": "Reach level 20 in every skill",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "281": {
+    "id": "218",
+    "region": "General",
+    "name": "Reach Base Level 30",
+    "task": "Reach level 30 in every skill",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "282": {
+    "id": "215",
+    "region": "General",
+    "name": "Reach Base Level 5",
+    "task": "Reach level 5 in every skill",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "283": {
+    "id": "403",
+    "region": "General",
+    "name": "Reach Combat Level 50",
+    "task": "Reach Combat Level 50",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "284": {
+    "id": "404",
+    "region": "General",
+    "name": "Reach Combat Level 75",
+    "task": "Reach Combat Level 75",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "285": {
+    "id": "203",
+    "region": "General",
+    "name": "Reach Total Level 100",
+    "task": "Reach a Total Level of 100",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "286": {
+    "id": "204",
+    "region": "General",
+    "name": "Reach Total Level 250",
+    "task": "Reach a Total Level of 250",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "287": {
+    "id": "205",
+    "region": "General",
+    "name": "Reach Total Level 500",
+    "task": "Reach a Total Level of 500",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "288": {
+    "id": "206",
+    "region": "General",
+    "name": "Reach Total Level 750",
+    "task": "Reach a Total Level of 750",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "289": {
+    "id": "1304",
+    "region": "General",
+    "name": "Read a prayer book near a lectern",
+    "task": "Read a Prayer book near a lectern",
+    "requirements": "Either  Morytania\u2713 for completion of   Great Brain Robbery, or  Fremennik\u2713 to complete a god book",
+    "pts": "30"
+  },
+  "290": {
+    "id": "1330",
+    "region": "General",
+    "name": "Scrape some blue dragonhide",
+    "task": "Scrape some blue dragonhide",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "291": {
+    "id": "320",
+    "region": "General",
+    "name": "Slay 250 Creatures",
+    "task": "Slay 250 creatures whilst on a Slayer Task",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "292": {
+    "id": "352",
+    "region": "General",
+    "name": "Smelt a Steel Bar",
+    "task": "Use a Furnace to smelt a Steel Bar",
+    "requirements": "30 Smithing",
+    "pts": "30"
+  },
+  "293": {
+    "id": "1375",
+    "region": "General",
+    "name": "Smith 10 Steel bolts (unf)",
+    "task": "Use an Anvil to smith 10 Steel bolts (unf)",
+    "requirements": "33 Smithing",
+    "pts": "30"
+  },
+  "294": {
+    "id": "349",
+    "region": "General",
+    "name": "Smith 150 Iron Arrowtips",
+    "task": "Use an Anvil to smith 150 Iron Arrowtips",
+    "requirements": "20 Smithing",
+    "pts": "30"
+  },
+  "295": {
+    "id": "1824",
+    "region": "General",
+    "name": "Smith 250 Mithril bolts (unf)",
+    "task": "Use an Anvil to smith 250 Mithril bolts (unf)",
+    "requirements": "53 Smithing",
+    "pts": "30"
+  },
+  "296": {
+    "id": "351",
+    "region": "General",
+    "name": "Smith a Steel Platebody",
+    "task": "Use an Anvil to smith a Steel Platebody",
+    "requirements": "48 Smithing",
+    "pts": "30"
+  },
+  "297": {
+    "id": "298",
+    "region": "General",
+    "name": "Successfully Cook 5 Pieces of Food",
+    "task": "Cook 5 pieces of food in a row without burning them",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "298": {
+    "id": "432",
+    "region": "General",
+    "name": "Teleport Using Law Runes",
+    "task": "Cast any teleport spell that uses Law Runes",
+    "requirements": "25 Magic, alternatively  6 Magic with  Kourend\u2713 or  17 Magic with Grimoire",
+    "pts": "30"
+  },
+  "299": {
+    "id": "1624",
+    "region": "General",
+    "name": "Trade a herb with Jekyll",
+    "task": "Trade a herb with Jekyll for a potion",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "300": {
+    "id": "387",
+    "region": "General",
+    "name": "Use the Protect from Melee Prayer",
+    "task": "Use the Protect from Melee Prayer",
+    "requirements": "43 Prayer",
+    "pts": "30"
+  },
+  "301": {
+    "id": "639",
+    "region": "Karamja",
+    "name": "Buy a Snapdragon From Pirate Jackie the Fruit",
+    "task": "Buy a Snapdragon From Pirate Jackie the Fruit in Brimhaven",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "302": {
+    "id": "646",
+    "region": "Karamja",
+    "name": "Catch 50 Karambwan",
+    "task": "Catch 50 Karambwan on Karamja",
+    "requirements": "65 FishingPartial completion of   Tai Bwo Wannai Trio",
+    "pts": "30"
+  },
+  "303": {
+    "id": "645",
+    "region": "Karamja",
+    "name": "Catch a Salmon on Karamja",
+    "task": "Catch a Salmon on Karamja",
+    "requirements": "30 Fishing",
+    "pts": "30"
+  },
+  "304": {
+    "id": "671",
+    "region": "Karamja",
+    "name": "Complete the Easy Karamja Diary",
+    "task": "Complete all of the easy tasks in the   Karamja Achievement Diary",
+    "requirements": "See   Karamja Diary#Easy",
+    "pts": "30"
+  },
+  "305": {
+    "id": "672",
+    "region": "Karamja",
+    "name": "Complete the Medium Karamja Diary",
+    "task": "Complete all of the medium tasks in the   Karamja Achievement Diary",
+    "requirements": "See   Karamja Diary#Medium",
+    "pts": "30"
+  },
+  "306": {
+    "id": "648",
+    "region": "Karamja",
+    "name": "Craft 50 Nature Runes",
+    "task": "Craft 50 Nature Runes from Essence at the Nature Altar",
+    "requirements": "44 Runecraft",
+    "pts": "30"
+  },
+  "307": {
+    "id": "658",
+    "region": "Karamja",
+    "name": "Defeat a Greater Demon on Karamja",
+    "task": "Defeat a Greater Demon on Karamja",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "308": {
+    "id": "670",
+    "region": "Karamja",
+    "name": "Defeat a Steel Dragon on Karamja",
+    "task": "Defeat a Steel Dragon on Karamja",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "309": {
+    "id": "650",
+    "region": "Karamja",
+    "name": "Defeat a TzHaar",
+    "task": "Defeat any TzHaar in Mor Ul Rek",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "310": {
+    "id": "683",
+    "region": "Karamja",
+    "name": "Enter the Brimhaven Dungeon",
+    "task": "Enter the Brimhaven Dungeon",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "311": {
+    "id": "676",
+    "region": "Karamja",
+    "name": "Enter the Tai Bwo Wannai Hardwood Grove",
+    "task": "Enter the Hardwood Grove in Tai Bwo Wannai",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "312": {
+    "id": "656",
+    "region": "Karamja",
+    "name": "Equip a Toktz-Ket-Xil",
+    "task": "Equip a Toktz-Ket-Xil",
+    "requirements": "60 Defence",
+    "pts": "30"
+  },
+  "313": {
+    "id": "662",
+    "region": "Karamja",
+    "name": "Equip a Toktz-Xil-Ak",
+    "task": "Equip a Toktz-Xil-Ak",
+    "requirements": "60 Attack",
+    "pts": "30"
+  },
+  "314": {
+    "id": "663",
+    "region": "Karamja",
+    "name": "Equip a Toktz-Xil-Ek",
+    "task": "Equip a Toktz-Xil-Ek",
+    "requirements": "60 Attack",
+    "pts": "30"
+  },
+  "315": {
+    "id": "651",
+    "region": "Karamja",
+    "name": "Equip an Obsidian Cape",
+    "task": "Equip an Obsidian Cape",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "316": {
+    "id": "1529",
+    "region": "Karamja",
+    "name": "Sleep in Paramaya Inn",
+    "task": "Pay the barkeep to sleep in Paramaya Inn, in Shilo Village",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "317": {
+    "id": "640",
+    "region": "Karamja",
+    "name": "Take a Shortcut Across the Shilo Village River",
+    "task": "Use the Stepping Stones Agility Shortcut in Shilo Village",
+    "requirements": "32 Agility",
+    "pts": "30"
+  },
+  "318": {
+    "id": "507",
+    "region": "Misthalin",
+    "name": "Build a Bank on Fossil Island",
+    "task": "Build a Bank at the Museum Camp on Fossil Island",
+    "requirements": "21 Construction",
+    "pts": "30"
+  },
+  "319": {
+    "id": "445",
+    "region": "Misthalin",
+    "name": "Catch 50 Implings in Puro-Puro",
+    "task": "Catch 50 Implings in Puro-Puro",
+    "requirements": "17 Hunter",
+    "pts": "30"
+  },
+  "320": {
+    "id": "465",
+    "region": "Misthalin",
+    "name": "Chop a Sulliuscep Cap",
+    "task": "Chop a Sulliuscep Cap on Fossil Island",
+    "requirements": "65 Woodcutting",
+    "pts": "30"
+  },
+  "321": {
+    "id": "1316",
+    "region": "Misthalin",
+    "name": "Churn some butter",
+    "task": "Use a churn to make some butter",
+    "requirements": "38 Cooking",
+    "pts": "30"
+  },
+  "322": {
+    "id": "460",
+    "region": "Misthalin",
+    "name": "Complete 10 Laps of the Draynor Agility Course",
+    "task": "Complete 10 laps of the Draynor Rooftop Agility Course",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "323": {
+    "id": "1523",
+    "region": "Misthalin",
+    "name": "Complete 10 Laps of the Varrock Agility Course",
+    "task": "Complete 10 laps of the Varrock Rooftop Agility Course",
+    "requirements": "30 Agility",
+    "pts": "30"
+  },
+  "324": {
+    "id": "447",
+    "region": "Misthalin",
+    "name": "Complete a Volcanic Mine Game",
+    "task": "Complete a Volcanic Mine game on Fossil Island",
+    "requirements": "50 Mining",
+    "pts": "30"
+  },
+  "325": {
+    "id": "499",
+    "region": "Misthalin",
+    "name": "Complete Demon Slayer",
+    "task": "Complete the   Demon Slayer quest",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "326": {
+    "id": "500",
+    "region": "Misthalin",
+    "name": "Complete Sheep Shearer",
+    "task": "Complete the   Sheep Shearer quest",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "327": {
+    "id": "488",
+    "region": "Misthalin",
+    "name": "Complete the Easy Lumbridge & Draynor Diary",
+    "task": "Complete all of the easy tasks in the   Lumbridge & Draynor Achievement Diary",
+    "requirements": "See   Lumbridge & Draynor Diary#Easy",
+    "pts": "30"
+  },
+  "328": {
+    "id": "1047",
+    "region": "Misthalin",
+    "name": "Complete the Easy Varrock Diary",
+    "task": "Complete all of the easy tasks in the   Varrock Achievement Diary",
+    "requirements": "See   Varrock Diary#Easy",
+    "pts": "30"
+  },
+  "329": {
+    "id": "489",
+    "region": "Misthalin",
+    "name": "Complete the Medium Lumbridge & Draynor Diary",
+    "task": "Complete all of the medium tasks in the   Lumbridge & Draynor Achievement Diary",
+    "requirements": "See   Lumbridge & Draynor Diary#Medium",
+    "pts": "30"
+  },
+  "330": {
+    "id": "1048",
+    "region": "Misthalin",
+    "name": "Complete the Medium Varrock Diary",
+    "task": "Complete all of the medium tasks in the   Varrock Achievement Diary",
+    "requirements": "See   Varrock Diary#Medium",
+    "pts": "30"
+  },
+  "331": {
+    "id": "503",
+    "region": "Misthalin",
+    "name": "Complete Vampyre Slayer",
+    "task": "Complete the   Vampyre Slayer quest",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "332": {
+    "id": "463",
+    "region": "Misthalin",
+    "name": "Craft 50 Cosmic Runes",
+    "task": "Craft 50 Cosmic Runes from Essence at the Cosmic Altar from Essence",
+    "requirements": "27 Runecraft",
+    "pts": "30"
+  },
+  "333": {
+    "id": "462",
+    "region": "Misthalin",
+    "name": "Craft 50 Water Runes",
+    "task": "Craft 50 Water Runes from Essence at the Water Altar",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "334": {
+    "id": "1757",
+    "region": "Misthalin",
+    "name": "Defeat 50 Tormented Demons",
+    "task": "Defeat 50 Tormented Demons",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "335": {
+    "id": "467",
+    "region": "Misthalin",
+    "name": "Defeat a Fossil Island Wyvern",
+    "task": "Defeat any type of Wyvern on Fossil Island",
+    "requirements": "66 Slayer",
+    "pts": "30"
+  },
+  "336": {
+    "id": "1756",
+    "region": "Misthalin",
+    "name": "Defeat a Tormented Demon",
+    "task": "Defeat a Tormented Demon",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "337": {
+    "id": "476",
+    "region": "Misthalin",
+    "name": "Defeat Bryophyta",
+    "task": "Defeat Bryophyta in Varrock Sewers",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "338": {
+    "id": "472",
+    "region": "Misthalin",
+    "name": "Defeat Obor",
+    "task": "Defeat Obor in Edgeville Dungeon",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "339": {
+    "id": "1648",
+    "region": "Misthalin",
+    "name": "Defeat Scurrius",
+    "task": "Defeat Scurrius",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "340": {
+    "id": "1649",
+    "region": "Misthalin",
+    "name": "Defeat Scurrius 10 times",
+    "task": "Defeat Scurrius 10 times",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "341": {
+    "id": "1650",
+    "region": "Misthalin",
+    "name": "Defeat Scurrius 25 times",
+    "task": "Defeat Scurrius 25 times",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "342": {
+    "id": "439",
+    "region": "Misthalin",
+    "name": "Dismantle 20 Filled Bird Houses",
+    "task": "Dismantle 20 filled Bird Houses on Fossil Island",
+    "requirements": "5 Hunter,  5 Crafting",
+    "pts": "30"
+  },
+  "343": {
+    "id": "501",
+    "region": "Misthalin",
+    "name": "Drink From the Tears of Guthix",
+    "task": "Drink from the Tears of Guthix in the Lumbridge Swamp Caves",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "344": {
+    "id": "1526",
+    "region": "Misthalin",
+    "name": "Eat Eel sushi",
+    "task": "Eat the Dorgeshuun delicacy, Eel sushi",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "345": {
+    "id": "451",
+    "region": "Misthalin",
+    "name": "Enter the Cooks' Guild",
+    "task": "Enter the Cooks' Guild west of Varrock",
+    "requirements": "32 Cooking",
+    "pts": "30"
+  },
+  "346": {
+    "id": "479",
+    "region": "Misthalin",
+    "name": "Equip a Dorgeshuun Crossbow",
+    "task": "Equip a Dorgeshuun Crossbow",
+    "requirements": "28 Ranged",
+    "pts": "30"
+  },
+  "347": {
+    "id": "1830",
+    "region": "Misthalin",
+    "name": "Equip a Rat Bone Weapon",
+    "task": "Obtain and equip any Rat Bone weaponry",
+    "requirements": "50 Attack OR  50 Ranged OR  50 Magic",
+    "pts": "30"
+  },
+  "348": {
+    "id": "502",
+    "region": "Misthalin",
+    "name": "Equip Some Fancy Boots or Fighting Boots",
+    "task": "Equip either a pair of Fancy Boots or a pair of Fighting Boots",
+    "requirements": "Completion of the Stronghold of Security, two-factor authentication on your account.",
+    "pts": "30"
+  },
+  "349": {
+    "id": "1254",
+    "region": "Misthalin",
+    "name": "Equip the Forestry Basket",
+    "task": "Obtain and Equip the Forestry Basket",
+    "requirements": "75 Smithing, 75 Woodcutting",
+    "pts": "30"
+  },
+  "350": {
+    "id": "505",
+    "region": "Misthalin",
+    "name": "Fully Unlock the Mycelium Transportation System",
+    "task": "Unlock every destination for the Mycelium Transportation System on Fossil Island",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "351": {
+    "id": "1531",
+    "region": "Misthalin",
+    "name": "Get a Gem from a Gorak",
+    "task": "Obtain a gem drop from a Gorak",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "352": {
+    "id": "1528",
+    "region": "Misthalin",
+    "name": "Make a pie for Romily",
+    "task": "Make a pie for Romily, north west of Varrock",
+    "requirements": "32 Cooking",
+    "pts": "30"
+  },
+  "353": {
+    "id": "1613",
+    "region": "Misthalin",
+    "name": "Mine 25 Pure Essence",
+    "task": "Mine 25 Pure Essence",
+    "requirements": "30 Mining",
+    "pts": "30"
+  },
+  "354": {
+    "id": "1329",
+    "region": "Misthalin",
+    "name": "Open the Dark Chest",
+    "task": "Open the Dark Chest",
+    "requirements": "28 Thieving",
+    "pts": "30"
+  },
+  "355": {
+    "id": "458",
+    "region": "Misthalin",
+    "name": "Pickpocket a Bullseye Lantern From a Cave Goblin",
+    "task": "Pickpocket a Bullseye Lantern from a Cave Goblin",
+    "requirements": "36 Thieving",
+    "pts": "30"
+  },
+  "356": {
+    "id": "454",
+    "region": "Misthalin",
+    "name": "Pickpocket a H.A.M. Member",
+    "task": "Pickpocket any H.A.M. member at their hideout",
+    "requirements": "15 Thieving",
+    "pts": "30"
+  },
+  "357": {
+    "id": "455",
+    "region": "Misthalin",
+    "name": "Pickpocket a Varrock Guard",
+    "task": "Pickpocket any Varrock Guard",
+    "requirements": "40 Thieving",
+    "pts": "30"
+  },
+  "358": {
+    "id": "1532",
+    "region": "Misthalin",
+    "name": "Provide Terry a buckle",
+    "task": "Show Terry Balando in the Digsite a Belt Buckle",
+    "requirements": "N/A",
+    "pts": "30"
+  },
+  "359": {
+    "id": "509",
+    "region": "Misthalin",
+    "name": "Use a Digsite Pendant to Teleport to Fossil Island",
+    "task": "Use a Digsite Pendant to teleport to Fossil Island",
+    "requirements": "49 Magic",
+    "pts": "30"
+  },
+  "360": {
+    "id": "450",
+    "region": "Misthalin",
+    "name": "Use the Range in Lumbridge Castle",
+    "task": "Use the Range in Lumbridge Castle to cook some food",
+    "requirements": "Completion of   Cook's Assistant",
+    "pts": "30"
+  },
+  "361": {
+    "id": "1133",
+    "region": "Misthalin",
+    "name": "Win a Game of Soul Wars",
+    "task": "Win a game of Soul Wars",
+    "requirements": "40 Combat level,  500 Skills",
+    "pts": "30"
+  }
+}
